@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cm856e00iw7c"]
+
+[ext_resource type="Script" uid="uid://bqh4ie42tnd14" path="res://scripts/ItemDatabase.gd" id="1_njh32"]
+
+[node name="ItemDatabase" type="Node2D" unique_id=173001445]
+script = ExtResource("1_njh32")

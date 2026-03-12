@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cj6hsa6k1v0vu"]
+
+[ext_resource type="Script" uid="uid://be5v30hutu4fp" path="res://scripts/recipe_manager.gd" id="1_41m37"]
+
+[node name="RecipeManager" type="Node2D" unique_id=938388327]
+script = ExtResource("1_41m37")

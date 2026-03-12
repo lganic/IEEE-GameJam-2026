@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bmkokly4q6oj3"]
+
+[ext_resource type="Texture2D" uid="uid://b51c1q20gw5xx" path="res://scenes/FoodItems/jellypatty.png" id="1_2htyo"]
+[ext_resource type="Script" uid="uid://c0kdgc6s07nto" path="res://scripts/item.gd" id="1_dc3ox"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2htyo"]
+size = Vector2(8.8, 10)
+
+[node name="Item" type="RigidBody2D" unique_id=78659004 groups=["items"]]
+linear_damp = 2.0
+angular_damp = 0.955
+script = ExtResource("1_dc3ox")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1862774044]
+scale = Vector2(0.43999887, 0.45363426)
+texture = ExtResource("1_2htyo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=511094793]
+scale = Vector2(5, 1)
+shape = SubResource("RectangleShape2D_2htyo")

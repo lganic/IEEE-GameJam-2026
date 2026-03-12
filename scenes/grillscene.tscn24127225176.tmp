@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bk75s1dq66fur"]
+
+[ext_resource type="Texture2D" uid="uid://77xsyo1omuag" path="res://assets/grillscene.png" id="1_dhc3s"]
+[ext_resource type="PackedScene" uid="uid://b8an1u05jflck" path="res://scenes/PlayerGrabber.tscn" id="2_rbtp0"]
+[ext_resource type="PackedScene" uid="uid://bmkokly4q6oj3" path="res://scenes/FoodItems/item.tscn" id="3_piee8"]
+[ext_resource type="PackedScene" uid="uid://c7u1b7p4qi6kq" path="res://scenes/FoodItems/bun.tscn" id="4_piee8"]
+[ext_resource type="PackedScene" uid="uid://cm856e00iw7c" path="res://scenes/ItemDatabase.tscn" id="5_fyaf1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wacy"]
+atlas = ExtResource("1_dhc3s")
+region = Rect2(0, 0, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbtp0"]
+atlas = ExtResource("1_dhc3s")
+region = Rect2(0, 256, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_piee8"]
+atlas = ExtResource("1_dhc3s")
+region = Rect2(0, 512, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyaf1"]
+atlas = ExtResource("1_dhc3s")
+region = Rect2(0, 768, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sunuu"]
+atlas = ExtResource("1_dhc3s")
+region = Rect2(0, 1024, 512, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8npoe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wacy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbtp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_piee8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fyaf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sunuu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fyaf1"]
+size = Vector2(164, 76)
+
+[node name="Node2D" type="Node2D" unique_id=1421340171]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2074743469]
+sprite_frames = SubResource("SpriteFrames_8npoe")
+autoplay = "default"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1453666503]
+position = Vector2(-36, 0)
+zoom = Vector2(2.64, 2.64)
+
+[node name="PlayerGrabber" parent="." unique_id=1821917048 instance=ExtResource("2_rbtp0")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=556590701]
+position = Vector2(-154, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1248262454]
+position = Vector2(-1, 21)
+shape = SubResource("RectangleShape2D_fyaf1")
+
+[node name="Item" parent="." unique_id=78659004 instance=ExtResource("3_piee8")]
+position = Vector2(-187, 20)
+
+[node name="Item2" parent="." unique_id=980988595 instance=ExtResource("4_piee8")]
+position = Vector2(-178, 1)
+
+[node name="Item3" parent="." unique_id=484909437 instance=ExtResource("4_piee8")]
+position = Vector2(-173, -16)
+
+[node name="ItemDatabase" parent="." unique_id=173001445 instance=ExtResource("5_fyaf1")]

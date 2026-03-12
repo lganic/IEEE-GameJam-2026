@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b7qcc61up2mui"]
+
+[ext_resource type="PackedScene" uid="uid://bmkokly4q6oj3" path="res://scenes/FoodItems/item.tscn" id="1_r5s6l"]
+
+[node name="Item" unique_id=78659004 instance=ExtResource("1_r5s6l")]
+item_id = "cooked_patty"

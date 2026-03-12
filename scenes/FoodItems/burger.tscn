@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ckxmo2dh8kbcf"]
+
+[ext_resource type="PackedScene" uid="uid://bmkokly4q6oj3" path="res://scenes/FoodItems/item.tscn" id="1_xon6w"]
+[ext_resource type="Texture2D" uid="uid://b3vtwn8qert5k" path="res://scenes/FoodItems/burger.png" id="2_a2c5y"]
+
+[node name="Item" unique_id=78659004 instance=ExtResource("1_xon6w")]
+item_id = "burger"
+
+[node name="Sprite2D" parent="." index="0" unique_id=1862774044]
+texture = ExtResource("2_a2c5y")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=511094793]
+scale = Vector2(4.398121, -2.786671)

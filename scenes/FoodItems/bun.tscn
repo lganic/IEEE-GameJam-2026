@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c7u1b7p4qi6kq"]
+
+[ext_resource type="PackedScene" uid="uid://bmkokly4q6oj3" path="res://scenes/FoodItems/item.tscn" id="1_u03ex"]
+[ext_resource type="Texture2D" uid="uid://ci0f4yi3scu8w" path="res://scenes/FoodItems/bun.png" id="2_l8t4f"]
+
+[node name="Item" unique_id=78659004 instance=ExtResource("1_u03ex")]
+item_id = "bun"
+
+[node name="Sprite2D" parent="." index="0" unique_id=1862774044]
+texture = ExtResource("2_l8t4f")
