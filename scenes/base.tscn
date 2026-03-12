@@ -1,3 +1,19 @@
 [gd_scene format=3 uid="uid://c4cg32n2py332"]
 
+[ext_resource type="PackedScene" uid="uid://ccs0yjbxuyx7f" path="res://scenes/ship.tscn" id="1_pvqg0"]
+
 [node name="Node2D" type="Node2D" unique_id=1855781328]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1891781329]
+offset_left = -690.0
+offset_top = -407.0
+offset_right = -650.0
+offset_bottom = -367.0
+scale = Vector2(37.44, 22.8)
+color = Color(0, 0, 0, 1)
+
+[node name="Node2D" parent="." unique_id=1361151523 instance=ExtResource("1_pvqg0")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=401445166]
+position = Vector2(57, 10)
+zoom = Vector2(1.68, 1.68)
