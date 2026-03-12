@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cf2m1wo0037y8"]
+
+[ext_resource type="PackedScene" uid="uid://bmkokly4q6oj3" path="res://scenes/FoodItems/item.tscn" id="1_ks6ef"]
+[ext_resource type="Texture2D" uid="uid://8eupcu73aasn" path="res://scenes/FoodItems/uncooked.png" id="2_p25k6"]
+
+[node name="Item" unique_id=78659004 instance=ExtResource("1_ks6ef")]
+item_id = "uncooked_patty"
+grill_result_id = "cooked_patty"
+grill_time = 10.0
+
+[node name="Sprite2D" parent="." index="0" unique_id=1862774044]
+scale = Vector2(0.43027848, 0.44414923)
+texture = ExtResource("2_p25k6")

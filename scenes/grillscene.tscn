@@ -2,10 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://77xsyo1omuag" path="res://assets/grillscene.png" id="1_dhc3s"]
 [ext_resource type="PackedScene" uid="uid://b8an1u05jflck" path="res://scenes/PlayerGrabber.tscn" id="2_rbtp0"]
+[ext_resource type="PackedScene" uid="uid://emeuqpafmaym" path="res://scenes/grill.tscn" id="3_8npoe"]
 [ext_resource type="PackedScene" uid="uid://cj6hsa6k1v0vu" path="res://scenes/RecipeManager.tscn" id="3_sunuu"]
 [ext_resource type="PackedScene" uid="uid://c7u1b7p4qi6kq" path="res://scenes/FoodItems/bun.tscn" id="4_piee8"]
 [ext_resource type="PackedScene" uid="uid://cm856e00iw7c" path="res://scenes/ItemDatabase.tscn" id="5_fyaf1"]
-[ext_resource type="PackedScene" uid="uid://b7qcc61up2mui" path="res://scenes/FoodItems/patty.tscn" id="5_sunuu"]
+[ext_resource type="PackedScene" uid="uid://cf2m1wo0037y8" path="res://scenes/FoodItems/uncooked.tscn" id="6_8npoe"]
+[ext_resource type="Texture2D" uid="uid://ci0f4yi3scu8w" path="res://scenes/FoodItems/bun.png" id="8_y55k7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3wacy"]
 atlas = ExtResource("1_dhc3s")
@@ -50,8 +52,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fyaf1"]
-size = Vector2(164, 76)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uv6o0"]
+size = Vector2(333, 20)
 
 [node name="Node2D" type="Node2D" unique_id=1421340171]
 
@@ -65,22 +67,28 @@ zoom = Vector2(2.64, 2.64)
 
 [node name="PlayerGrabber" parent="." unique_id=1821917048 instance=ExtResource("2_rbtp0")]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=556590701]
-position = Vector2(-154, 64)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1248262454]
-position = Vector2(-1, 21)
-shape = SubResource("RectangleShape2D_fyaf1")
+[node name="Grill" parent="." unique_id=1476349688 instance=ExtResource("3_8npoe")]
 
 [node name="RecipeManager" parent="." unique_id=938388327 instance=ExtResource("3_sunuu")]
 
 [node name="ItemDatabase" parent="." unique_id=173001445 instance=ExtResource("5_fyaf1")]
 
-[node name="Item" parent="." unique_id=78659004 instance=ExtResource("4_piee8")]
-position = Vector2(-167, 24)
+[node name="Item" parent="." unique_id=78659004 instance=ExtResource("6_8npoe")]
+position = Vector2(91, 5)
 
-[node name="Item2" parent="." unique_id=1093556632 instance=ExtResource("5_sunuu")]
-position = Vector2(-110, 18)
+[node name="Item2" parent="." unique_id=2041909224 instance=ExtResource("4_piee8")]
+position = Vector2(35, 19)
 
-[node name="Item3" parent="." unique_id=1024822030 instance=ExtResource("4_piee8")]
-position = Vector2(-192, 5)
+[node name="Item3" parent="." unique_id=181922884 instance=ExtResource("4_piee8")]
+position = Vector2(27, -12)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1789826998]
+position = Vector2(97, 61)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=324515681]
+scale = Vector2(3.3200014, 1)
+texture = ExtResource("8_y55k7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=596982912]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_uv6o0")
