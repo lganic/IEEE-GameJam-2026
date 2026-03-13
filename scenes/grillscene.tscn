@@ -69,8 +69,8 @@ sprite_frames = SubResource("SpriteFrames_8npoe")
 autoplay = "default"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1453666503]
-position = Vector2(-36, 0)
-zoom = Vector2(2.64, 2.64)
+position = Vector2(-67, 3)
+zoom = Vector2(4.705, 4.705)
 
 [node name="PlayerGrabber" parent="." unique_id=1821917048 instance=ExtResource("2_rbtp0")]
 
@@ -94,26 +94,20 @@ shape = SubResource("RectangleShape2D_uv6o0")
 
 [node name="HandCursor" parent="." unique_id=668411722 instance=ExtResource("11_6vbwl")]
 
-[node name="Item" parent="." unique_id=78659004 instance=ExtResource("9_uv6o0")]
-position = Vector2(1, 31)
-
-[node name="Item2" parent="." unique_id=2032230575 instance=ExtResource("9_uv6o0")]
-position = Vector2(-29, 15)
-
 [node name="Item3" parent="." unique_id=74101640 instance=ExtResource("9_uv6o0")]
 position = Vector2(58, 16)
 
 [node name="Item4" parent="." unique_id=1563514686 instance=ExtResource("10_187va")]
-position = Vector2(110, -42)
+position = Vector2(-40, -42)
 
 [node name="Item5" parent="." unique_id=951836993 instance=ExtResource("11_0cl04")]
-position = Vector2(183, -15)
+position = Vector2(33, -15)
 
 [node name="Item6" parent="." unique_id=1843956262 instance=ExtResource("12_23817")]
-position = Vector2(128, 10)
+position = Vector2(-22, 10)
 
 [node name="Item7" parent="." unique_id=960449222 instance=ExtResource("13_7x280")]
-position = Vector2(168, -54)
+position = Vector2(-41, -67)
 
 [node name="Item8" parent="." unique_id=540991431 instance=ExtResource("14_rne88")]
 position = Vector2(28, -62)
@@ -122,7 +116,7 @@ position = Vector2(28, -62)
 position = Vector2(18, -87)
 
 [node name="Item10" parent="." unique_id=460593437 instance=ExtResource("11_0cl04")]
-position = Vector2(110, -77)
+position = Vector2(-33, -77)
 
 [node name="Item11" parent="." unique_id=1973268595 instance=ExtResource("10_187va")]
-position = Vector2(111, -108)
+position = Vector2(-32, -108)
