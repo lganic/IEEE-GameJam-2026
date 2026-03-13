@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://fq4xyr5fxigs" path="res://scenes/grill.gd" id="1_b7lk3"]
 [ext_resource type="AudioStream" uid="uid://b5jte2vxbsjmx" path="res://audio/sizzle.wav" id="2_70781"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70781"]
+size = Vector2(166, 40)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyaf1"]
 size = Vector2(164, 76)
 
@@ -11,6 +14,15 @@ size = Vector2(164, 15)
 
 [node name="Grill" type="Node2D" unique_id=1476349688]
 script = ExtResource("1_b7lk3")
+
+[node name="hand-collider-area" type="Area2D" parent="." unique_id=1507895404]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hand-collider-area" unique_id=1913545098]
+position = Vector2(-155, 43)
+shape = SubResource("RectangleShape2D_70781")
+debug_color = Color(0.27351713, 0.6198599, 0.36862263, 0.41960785)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2108496270]
 position = Vector2(-154, 64)
