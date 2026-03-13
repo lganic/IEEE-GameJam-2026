@@ -149,8 +149,6 @@ func transform_stack(stack: Array[Item], recipe: Dictionary) -> void:
 
 func spawn_poof(pos: Vector2) -> void:
 	
-	print("Ran the thing!")
-	
 	if poof_effect_scene == null:
 		return
 
