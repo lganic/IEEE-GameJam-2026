@@ -52,8 +52,8 @@ func stack_is_stable(stack: Array[Item]) -> bool:
 	for item in stack:
 		if item.linear_velocity.length() > 15.0:
 			return false
-		if abs(item.angular_velocity) > 1.0:
-			return false
+		#if abs(item.angular_velocity) > 1.0:
+			#return false
 	return true
 
 func has_item_below(item: Item, all_items: Array[Item]) -> bool:
