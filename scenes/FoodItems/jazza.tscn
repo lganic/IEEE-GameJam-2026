@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bv5b5lew4fmab"]
+
+[ext_resource type="PackedScene" uid="uid://bmkokly4q6oj3" path="res://scenes/FoodItems/item.tscn" id="1_du7oa"]
+[ext_resource type="Texture2D" uid="uid://bj67eavyb7aql" path="res://scenes/FoodItems/ingredients.png" id="2_ure23"]
+
+[node name="Item" unique_id=78659004 instance=ExtResource("1_du7oa")]
+item_id = "jazza"
+grill_result_id = "jazza-cooked"
+grill_time = 10.0
+
+[node name="Sprite2D" parent="." index="0" unique_id=1862774044]
+position = Vector2(-3.0994415e-06, 7.1525574e-07)
+scale = Vector2(0.68749994, 0.66666675)
+texture = ExtResource("2_ure23")
+region_enabled = true
+region_rect = Rect2(0, 48.31556, 64, 15.596313)

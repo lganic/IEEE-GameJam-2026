@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bj50j0e67u1wh"]
+
+[ext_resource type="PackedScene" uid="uid://bmkokly4q6oj3" path="res://scenes/FoodItems/item.tscn" id="1_x3vpj"]
+[ext_resource type="Texture2D" uid="uid://dpy2lkmtcoh4k" path="res://scenes/FoodItems/results.png" id="2_frowg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frowg"]
+size = Vector2(8.8, 22)
+
+[node name="Item" unique_id=78659004 instance=ExtResource("1_x3vpj")]
+item_id = "sand-bacon-jazza-cooked"
+grill_result_id = "garbage"
+grill_time = 10.0
+
+[node name="Sprite2D" parent="." index="0" unique_id=1862774044]
+position = Vector2(-3.0994415e-06, -4.2111526)
+scale = Vector2(0.68749994, 0.74405855)
+texture = ExtResource("2_frowg")
+region_enabled = true
+region_rect = Rect2(0, 226.19026, 64, 29.809738)
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=511094793]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_frowg")

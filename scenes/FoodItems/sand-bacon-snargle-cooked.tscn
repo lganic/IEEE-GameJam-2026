@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c1hxe7fshqngb"]
+
+[ext_resource type="PackedScene" uid="uid://bmkokly4q6oj3" path="res://scenes/FoodItems/item.tscn" id="1_8sv3p"]
+[ext_resource type="Texture2D" uid="uid://dpy2lkmtcoh4k" path="res://scenes/FoodItems/results.png" id="2_o2nws"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o2nws"]
+size = Vector2(8.8, 22)
+
+[node name="Item" unique_id=78659004 instance=ExtResource("1_8sv3p")]
+item_id = "sand-bacon-snargle-cooked"
+grill_result_id = "garbage"
+grill_time = 10.0
+
+[node name="Sprite2D" parent="." index="0" unique_id=1862774044]
+position = Vector2(-3.0994415e-06, -4.2111516)
+scale = Vector2(0.68749994, 0.7440585)
+texture = ExtResource("2_o2nws")
+region_enabled = true
+region_rect = Rect2(0, 162.15086, 64, 29.544922)
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=511094793]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_o2nws")

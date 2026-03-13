@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://do4ohvupj8r6g"]
+
+[ext_resource type="PackedScene" uid="uid://bmkokly4q6oj3" path="res://scenes/FoodItems/item.tscn" id="1_y84nq"]
+[ext_resource type="Texture2D" uid="uid://bj67eavyb7aql" path="res://scenes/FoodItems/ingredients.png" id="2_jxx2g"]
+
+[node name="Item" unique_id=78659004 instance=ExtResource("1_y84nq")]
+item_id = "garbage"
+
+[node name="Sprite2D" parent="." index="0" unique_id=1862774044]
+position = Vector2(-7.1525574e-07, -5.364418e-07)
+scale = Vector2(0.68749994, 0.625)
+texture = ExtResource("2_jxx2g")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 16.466057)

@@ -4,13 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://b8an1u05jflck" path="res://scenes/PlayerGrabber.tscn" id="2_rbtp0"]
 [ext_resource type="PackedScene" uid="uid://emeuqpafmaym" path="res://scenes/grill.tscn" id="3_8npoe"]
 [ext_resource type="PackedScene" uid="uid://cj6hsa6k1v0vu" path="res://scenes/RecipeManager.tscn" id="3_sunuu"]
-[ext_resource type="PackedScene" uid="uid://c7u1b7p4qi6kq" path="res://scenes/FoodItems/bun.tscn" id="4_piee8"]
 [ext_resource type="PackedScene" uid="uid://qhlmh263l0vb" path="res://scenes/PoofEffect.tscn" id="5_fiep1"]
 [ext_resource type="PackedScene" uid="uid://cm856e00iw7c" path="res://scenes/ItemDatabase.tscn" id="5_fyaf1"]
-[ext_resource type="PackedScene" uid="uid://b7qcc61up2mui" path="res://scenes/FoodItems/patty.tscn" id="5_sunuu"]
-[ext_resource type="PackedScene" uid="uid://cf2m1wo0037y8" path="res://scenes/FoodItems/uncooked.tscn" id="6_8npoe"]
 [ext_resource type="Texture2D" uid="uid://ci0f4yi3scu8w" path="res://scenes/FoodItems/bun.png" id="8_y55k7"]
+[ext_resource type="PackedScene" uid="uid://1t2uv7karocd" path="res://scenes/FoodItems/bacon.tscn" id="9_uv6o0"]
+[ext_resource type="PackedScene" uid="uid://b3m8beb0vis06" path="res://scenes/FoodItems/bread-lower.tscn" id="10_187va"]
+[ext_resource type="PackedScene" uid="uid://crum3pacmvval" path="res://scenes/FoodItems/bread-upper.tscn" id="11_0cl04"]
 [ext_resource type="PackedScene" uid="uid://bh0pugqh2rrqt" path="res://scenes/HandCursor.tscn" id="11_6vbwl"]
+[ext_resource type="PackedScene" uid="uid://dhviiwjbdqhok" path="res://scenes/FoodItems/biscuit.tscn" id="12_23817"]
+[ext_resource type="PackedScene" uid="uid://ulumbqfxnia3" path="res://scenes/FoodItems/zorp.tscn" id="13_7x280"]
+[ext_resource type="PackedScene" uid="uid://lqt2jrcbuunv" path="res://scenes/FoodItems/snargle.tscn" id="14_rne88"]
+[ext_resource type="PackedScene" uid="uid://bv5b5lew4fmab" path="res://scenes/FoodItems/jazza.tscn" id="15_msu7w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3wacy"]
 atlas = ExtResource("1_dhc3s")
@@ -77,15 +81,6 @@ poof_effect_scene = ExtResource("5_fiep1")
 
 [node name="ItemDatabase" parent="." unique_id=173001445 instance=ExtResource("5_fyaf1")]
 
-[node name="Item" parent="." unique_id=78659004 instance=ExtResource("6_8npoe")]
-position = Vector2(91, 5)
-
-[node name="Item2" parent="." unique_id=2041909224 instance=ExtResource("4_piee8")]
-position = Vector2(35, 19)
-
-[node name="Item3" parent="." unique_id=181922884 instance=ExtResource("4_piee8")]
-position = Vector2(27, -12)
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1789826998]
 position = Vector2(97, 61)
 
@@ -97,7 +92,37 @@ texture = ExtResource("8_y55k7")
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_uv6o0")
 
-[node name="Item4" parent="." unique_id=18287005 instance=ExtResource("5_sunuu")]
-position = Vector2(-28, 13)
-
 [node name="HandCursor" parent="." unique_id=668411722 instance=ExtResource("11_6vbwl")]
+
+[node name="Item" parent="." unique_id=78659004 instance=ExtResource("9_uv6o0")]
+position = Vector2(1, 31)
+
+[node name="Item2" parent="." unique_id=2032230575 instance=ExtResource("9_uv6o0")]
+position = Vector2(-29, 15)
+
+[node name="Item3" parent="." unique_id=74101640 instance=ExtResource("9_uv6o0")]
+position = Vector2(58, 16)
+
+[node name="Item4" parent="." unique_id=1563514686 instance=ExtResource("10_187va")]
+position = Vector2(110, -42)
+
+[node name="Item5" parent="." unique_id=951836993 instance=ExtResource("11_0cl04")]
+position = Vector2(183, -15)
+
+[node name="Item6" parent="." unique_id=1843956262 instance=ExtResource("12_23817")]
+position = Vector2(128, 10)
+
+[node name="Item7" parent="." unique_id=960449222 instance=ExtResource("13_7x280")]
+position = Vector2(168, -54)
+
+[node name="Item8" parent="." unique_id=540991431 instance=ExtResource("14_rne88")]
+position = Vector2(28, -62)
+
+[node name="Item9" parent="." unique_id=76684784 instance=ExtResource("15_msu7w")]
+position = Vector2(18, -87)
+
+[node name="Item10" parent="." unique_id=460593437 instance=ExtResource("11_0cl04")]
+position = Vector2(110, -77)
+
+[node name="Item11" parent="." unique_id=1973268595 instance=ExtResource("10_187va")]
+position = Vector2(111, -108)
