@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cywr47okunqv3"]
+
+[ext_resource type="Script" uid="uid://chepngeu3wxia" path="res://scripts/DeliveryZone.gd" id="1_i28am"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2l43"]
+size = Vector2(579, 1934)
+
+[node name="DeliveryZone" type="Area2D" unique_id=472155788]
+script = ExtResource("1_i28am")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=21638679]
+position = Vector2(-279.5, -253)
+shape = SubResource("RectangleShape2D_r2l43")

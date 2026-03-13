@@ -14,6 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://dsm43opr60ult" path="res://scenes/Dispensers/jazzaDispenser.tscn" id="12_wie6h"]
 [ext_resource type="PackedScene" uid="uid://bcgeq7bgxpkl1" path="res://scenes/Dispensers/SnargleDispenser.tscn" id="13_187va"]
 [ext_resource type="PackedScene" uid="uid://dgjbif7ovnj4n" path="res://scenes/Dispensers/ZorpDispenser.tscn" id="14_0cl04"]
+[ext_resource type="PackedScene" uid="uid://jl3nc1041rsw" path="res://scenes/OrderManager.tscn" id="15_0cl04"]
+[ext_resource type="PackedScene" uid="uid://cywr47okunqv3" path="res://scenes/DeliveryZone.tscn" id="15_187va"]
+[ext_resource type="PackedScene" uid="uid://bb3e2h0hg2akb" path="res://scenes/ReceiptTicket.tscn" id="16_23817"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3wacy"]
 atlas = ExtResource("1_dhc3s")
@@ -64,12 +67,13 @@ size = Vector2(333, 20)
 [node name="Node2D" type="Node2D" unique_id=1421340171]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2074743469]
+scale = Vector2(1, 1.0400003)
 sprite_frames = SubResource("SpriteFrames_8npoe")
 autoplay = "default"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1453666503]
 position = Vector2(-67, 3)
-zoom = Vector2(4.705, 4.705)
+zoom = Vector2(4.37, 4.37)
 
 [node name="PlayerGrabber" parent="." unique_id=1821917048 instance=ExtResource("2_rbtp0")]
 
@@ -92,40 +96,59 @@ texture = ExtResource("7_6vbwl")
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_uv6o0")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=936984953]
+[node name="HandCursor" parent="." unique_id=668411722 instance=ExtResource("11_6vbwl")]
+
+[node name="Dispensers" type="Node2D" parent="." unique_id=1217348228]
+
+[node name="Sprite2D" type="Sprite2D" parent="Dispensers" unique_id=936984953]
 position = Vector2(16.6324, -77)
 rotation = -1.5707964
 scale = Vector2(0.8061899, 2.2385125)
 texture = ExtResource("7_6vbwl")
 
-[node name="HandCursor" parent="." unique_id=668411722 instance=ExtResource("11_6vbwl")]
-
-[node name="FoodDispenser" parent="." unique_id=519732630 instance=ExtResource("9_8w17c")]
+[node name="FoodDispenser" parent="Dispensers" unique_id=519732630 instance=ExtResource("9_8w17c")]
 position = Vector2(-33.3676, -95)
 scale = Vector2(0.6400012, 0.64)
 
-[node name="FoodDispenser2" parent="." unique_id=1440851222 instance=ExtResource("10_7tmmr")]
+[node name="FoodDispenser2" parent="Dispensers" unique_id=1440851222 instance=ExtResource("10_7tmmr")]
 position = Vector2(12.6324, -95)
 scale = Vector2(0.6400012, 0.64)
 
-[node name="FoodDispenser3" parent="." unique_id=627496667 instance=ExtResource("11_wie6h")]
+[node name="FoodDispenser3" parent="Dispensers" unique_id=627496667 instance=ExtResource("11_wie6h")]
 position = Vector2(60.6324, -96)
 scale = Vector2(0.64, 0.64)
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=150757055]
+[node name="Sprite2D2" type="Sprite2D" parent="Dispensers" unique_id=150757055]
 position = Vector2(16, -25)
 rotation = -1.5707964
 scale = Vector2(0.68994343, 2.250939)
 texture = ExtResource("7_6vbwl")
 
-[node name="FoodDispenser4" parent="." unique_id=29627514 instance=ExtResource("12_wie6h")]
+[node name="FoodDispenser4" parent="Dispensers" unique_id=29627514 instance=ExtResource("12_wie6h")]
 position = Vector2(62, -40)
 scale = Vector2(0.64, 0.64)
 
-[node name="FoodDispenser5" parent="." unique_id=1778891613 instance=ExtResource("13_187va")]
+[node name="FoodDispenser5" parent="Dispensers" unique_id=1778891613 instance=ExtResource("13_187va")]
 position = Vector2(15, -40)
 scale = Vector2(0.64, 0.64)
 
-[node name="FoodDispenser6" parent="." unique_id=173100050 instance=ExtResource("14_0cl04")]
+[node name="FoodDispenser6" parent="Dispensers" unique_id=173100050 instance=ExtResource("14_0cl04")]
 position = Vector2(-32, -39)
 scale = Vector2(0.64, 0.64)
+
+[node name="Control" type="Control" parent="." unique_id=1241724224]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 204.0
+offset_top = -83.0
+offset_right = 244.0
+offset_bottom = -43.0
+
+[node name="OrderManager" parent="Control" unique_id=1399016746 instance=ExtResource("15_0cl04")]
+layout_mode = 1
+receipt_scene = ExtResource("16_23817")
+possible_orders = Array[String](["biscuit-cooked-jazza", "biscuit-cooked-zorp", "biscuit-cooked-snargle", "sand-jazza", "sand-zorp", "sand-snargle", "sand-jazza-cooked", "sand-zorp-cooked", "sand-snargle-cooked", "sand-bacon-jazza", "sand-bacon-zorp", "sand-bacon-snargle", "sand-bacon-jazza-cooked", "sand-bacon-zorp-cooked", "sand-bacon-snargle-cooked"])
+
+[node name="DeliveryZone" parent="." unique_id=472155788 instance=ExtResource("15_187va")]
+position = Vector2(-254, -2)
+order_manager_path = NodePath("../Control/OrderManager")

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://emeuqpafmaym"]
 
-[ext_resource type="Script" uid="uid://fq4xyr5fxigs" path="res://scenes/grill.gd" id="1_b7lk3"]
+[ext_resource type="Script" uid="uid://fq4xyr5fxigs" path="res://scripts/grill.gd" id="1_b7lk3"]
 [ext_resource type="AudioStream" uid="uid://b5jte2vxbsjmx" path="res://audio/sizzle.wav" id="2_70781"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_70781"]
