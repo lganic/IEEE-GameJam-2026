@@ -1,6 +1,7 @@
 extends Node
 class_name RecipeManager
 
+@export var poof_effect_scene: PackedScene
 @export var check_interval: float = 0.2
 
 var recipes = [
@@ -134,6 +135,8 @@ func transform_stack(stack: Array[Item], recipe: Dictionary) -> void:
 		spawn_position += item.global_position
 
 	spawn_position /= stack.size()
+	
+	spawn_poof(spawn_position)
 
 	for item in stack:
 		item.queue_free()
@@ -142,3 +145,15 @@ func transform_stack(stack: Array[Item], recipe: Dictionary) -> void:
 	var new_item = new_scene.instantiate()
 	new_item.global_position = spawn_position
 	get_tree().current_scene.add_child(new_item)
+
+
+func spawn_poof(pos: Vector2) -> void:
+	
+	print("Ran the thing!")
+	
+	if poof_effect_scene == null:
+		return
+
+	var poof = poof_effect_scene.instantiate()
+	poof.global_position = pos
+	get_tree().current_scene.add_child(poof)
