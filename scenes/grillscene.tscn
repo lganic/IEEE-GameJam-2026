@@ -6,15 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://cj6hsa6k1v0vu" path="res://scenes/RecipeManager.tscn" id="3_sunuu"]
 [ext_resource type="PackedScene" uid="uid://qhlmh263l0vb" path="res://scenes/PoofEffect.tscn" id="5_fiep1"]
 [ext_resource type="PackedScene" uid="uid://cm856e00iw7c" path="res://scenes/ItemDatabase.tscn" id="5_fyaf1"]
-[ext_resource type="Texture2D" uid="uid://ci0f4yi3scu8w" path="res://scenes/FoodItems/bun.png" id="8_y55k7"]
-[ext_resource type="PackedScene" uid="uid://1t2uv7karocd" path="res://scenes/FoodItems/bacon.tscn" id="9_uv6o0"]
-[ext_resource type="PackedScene" uid="uid://b3m8beb0vis06" path="res://scenes/FoodItems/bread-lower.tscn" id="10_187va"]
-[ext_resource type="PackedScene" uid="uid://crum3pacmvval" path="res://scenes/FoodItems/bread-upper.tscn" id="11_0cl04"]
+[ext_resource type="Texture2D" uid="uid://1j4ss218jpox" path="res://assets/wood (1).png" id="7_6vbwl"]
+[ext_resource type="PackedScene" uid="uid://d2ckfrrukhl4k" path="res://scenes/Dispensers/BaconDispenser.tscn" id="9_8w17c"]
+[ext_resource type="PackedScene" uid="uid://dji7vt8xk4ie5" path="res://scenes/Dispensers/BiscuitDispenser.tscn" id="10_7tmmr"]
 [ext_resource type="PackedScene" uid="uid://bh0pugqh2rrqt" path="res://scenes/HandCursor.tscn" id="11_6vbwl"]
-[ext_resource type="PackedScene" uid="uid://dhviiwjbdqhok" path="res://scenes/FoodItems/biscuit.tscn" id="12_23817"]
-[ext_resource type="PackedScene" uid="uid://ulumbqfxnia3" path="res://scenes/FoodItems/zorp.tscn" id="13_7x280"]
-[ext_resource type="PackedScene" uid="uid://lqt2jrcbuunv" path="res://scenes/FoodItems/snargle.tscn" id="14_rne88"]
-[ext_resource type="PackedScene" uid="uid://bv5b5lew4fmab" path="res://scenes/FoodItems/jazza.tscn" id="15_msu7w"]
+[ext_resource type="PackedScene" uid="uid://cf2kpdmd33u87" path="res://scenes/Dispensers/BunDispenser.tscn" id="11_wie6h"]
+[ext_resource type="PackedScene" uid="uid://dsm43opr60ult" path="res://scenes/Dispensers/jazzaDispenser.tscn" id="12_wie6h"]
+[ext_resource type="PackedScene" uid="uid://bcgeq7bgxpkl1" path="res://scenes/Dispensers/SnargleDispenser.tscn" id="13_187va"]
+[ext_resource type="PackedScene" uid="uid://dgjbif7ovnj4n" path="res://scenes/Dispensers/ZorpDispenser.tscn" id="14_0cl04"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3wacy"]
 atlas = ExtResource("1_dhc3s")
@@ -85,38 +84,48 @@ poof_effect_scene = ExtResource("5_fiep1")
 position = Vector2(97, 61)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=324515681]
-scale = Vector2(3.3200014, 1)
-texture = ExtResource("8_y55k7")
+rotation = -1.5707964
+scale = Vector2(1.320003, 5.2)
+texture = ExtResource("7_6vbwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=596982912]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_uv6o0")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=936984953]
+position = Vector2(16.6324, -77)
+rotation = -1.5707964
+scale = Vector2(0.8061899, 2.2385125)
+texture = ExtResource("7_6vbwl")
+
 [node name="HandCursor" parent="." unique_id=668411722 instance=ExtResource("11_6vbwl")]
 
-[node name="Item3" parent="." unique_id=74101640 instance=ExtResource("9_uv6o0")]
-position = Vector2(58, 16)
+[node name="FoodDispenser" parent="." unique_id=519732630 instance=ExtResource("9_8w17c")]
+position = Vector2(-33.3676, -95)
+scale = Vector2(0.6400012, 0.64)
 
-[node name="Item4" parent="." unique_id=1563514686 instance=ExtResource("10_187va")]
-position = Vector2(-40, -42)
+[node name="FoodDispenser2" parent="." unique_id=1440851222 instance=ExtResource("10_7tmmr")]
+position = Vector2(12.6324, -95)
+scale = Vector2(0.6400012, 0.64)
 
-[node name="Item5" parent="." unique_id=951836993 instance=ExtResource("11_0cl04")]
-position = Vector2(33, -15)
+[node name="FoodDispenser3" parent="." unique_id=627496667 instance=ExtResource("11_wie6h")]
+position = Vector2(60.6324, -96)
+scale = Vector2(0.64, 0.64)
 
-[node name="Item6" parent="." unique_id=1843956262 instance=ExtResource("12_23817")]
-position = Vector2(-22, 10)
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=150757055]
+position = Vector2(16, -25)
+rotation = -1.5707964
+scale = Vector2(0.68994343, 2.250939)
+texture = ExtResource("7_6vbwl")
 
-[node name="Item7" parent="." unique_id=960449222 instance=ExtResource("13_7x280")]
-position = Vector2(-41, -67)
+[node name="FoodDispenser4" parent="." unique_id=29627514 instance=ExtResource("12_wie6h")]
+position = Vector2(62, -40)
+scale = Vector2(0.64, 0.64)
 
-[node name="Item8" parent="." unique_id=540991431 instance=ExtResource("14_rne88")]
-position = Vector2(28, -62)
+[node name="FoodDispenser5" parent="." unique_id=1778891613 instance=ExtResource("13_187va")]
+position = Vector2(15, -40)
+scale = Vector2(0.64, 0.64)
 
-[node name="Item9" parent="." unique_id=76684784 instance=ExtResource("15_msu7w")]
-position = Vector2(18, -87)
-
-[node name="Item10" parent="." unique_id=460593437 instance=ExtResource("11_0cl04")]
-position = Vector2(-33, -77)
-
-[node name="Item11" parent="." unique_id=1973268595 instance=ExtResource("10_187va")]
-position = Vector2(-32, -108)
+[node name="FoodDispenser6" parent="." unique_id=173100050 instance=ExtResource("14_0cl04")]
+position = Vector2(-32, -39)
+scale = Vector2(0.64, 0.64)

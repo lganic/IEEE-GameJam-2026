@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://fxr762vrxb0d"]
+
+[ext_resource type="PackedScene" uid="uid://b3m8beb0vis06" path="res://scenes/FoodItems/bread-lower.tscn" id="1_katlo"]
+[ext_resource type="PackedScene" uid="uid://crum3pacmvval" path="res://scenes/FoodItems/bread-upper.tscn" id="2_rpife"]
+
+[node name="BothBuns" type="Node2D" unique_id=1608396040]
+
+[node name="Item" parent="." unique_id=78659004 instance=ExtResource("1_katlo")]
+position = Vector2(0, 7)
+
+[node name="Item2" parent="." unique_id=1023450796 instance=ExtResource("2_rpife")]
+position = Vector2(0, -8)

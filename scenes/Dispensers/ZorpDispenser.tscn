@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dgjbif7ovnj4n"]
+
+[ext_resource type="PackedScene" uid="uid://bcp2e4fbk8rn7" path="res://scenes/Dispensers/FoodDispenser.tscn" id="1_f4wfa"]
+[ext_resource type="Texture2D" uid="uid://deaoov3xl0sj8" path="res://assets/dispensers.png" id="2_284wm"]
+[ext_resource type="PackedScene" uid="uid://ulumbqfxnia3" path="res://scenes/FoodItems/zorp.tscn" id="2_l2g34"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l2g34"]
+size = Vector2(52, 56)
+
+[node name="FoodDispenser" unique_id=519732630 instance=ExtResource("1_f4wfa")]
+scene_to_spawn = ExtResource("2_l2g34")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=1771295]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_l2g34")
+
+[node name="Sprite2D" parent="." index="1" unique_id=145798283]
+texture = ExtResource("2_284wm")
+region_enabled = true
+region_rect = Rect2(0, 192.39337, 64, 60.92177)
