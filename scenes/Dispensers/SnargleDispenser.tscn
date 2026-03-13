@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bcp2e4fbk8rn7" path="res://scenes/Dispensers/FoodDispenser.tscn" id="1_hc03f"]
 [ext_resource type="PackedScene" uid="uid://lqt2jrcbuunv" path="res://scenes/FoodItems/snargle.tscn" id="2_fgv5a"]
 [ext_resource type="Texture2D" uid="uid://deaoov3xl0sj8" path="res://assets/dispensers.png" id="2_wqbey"]
+[ext_resource type="AudioStream" uid="uid://dfjfvwfmnddss" path="res://audio/squelchy.wav" id="4_fgv5a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fgv5a"]
 size = Vector2(52, 57)
@@ -18,3 +19,6 @@ shape = SubResource("RectangleShape2D_fgv5a")
 texture = ExtResource("2_wqbey")
 region_enabled = true
 region_rect = Rect2(0, 319.33926, 64, 60.255463)
+
+[node name="AudioStreamPlayer2D" parent="." index="2" unique_id=892334725]
+stream = ExtResource("4_fgv5a")

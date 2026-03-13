@@ -14,3 +14,5 @@ shape = SubResource("RectangleShape2D_tvssc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=145798283]
 texture = ExtResource("1_kvsh7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=892334725]

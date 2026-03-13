@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bcp2e4fbk8rn7" path="res://scenes/Dispensers/FoodDispenser.tscn" id="1_6u2cn"]
 [ext_resource type="Texture2D" uid="uid://deaoov3xl0sj8" path="res://assets/dispensers.png" id="2_eyo76"]
 [ext_resource type="PackedScene" uid="uid://fxr762vrxb0d" path="res://scenes/Dispensers/BothBuns.tscn" id="2_lk6ss"]
+[ext_resource type="AudioStream" uid="uid://cucngics4i3um" path="res://audio/boxy.wav" id="4_lk6ss"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eyo76"]
 size = Vector2(59, 56)
@@ -18,3 +19,6 @@ shape = SubResource("RectangleShape2D_eyo76")
 texture = ExtResource("2_eyo76")
 region_enabled = true
 region_rect = Rect2(0, 0, 64, 63.631897)
+
+[node name="AudioStreamPlayer2D" parent="." index="2" unique_id=892334725]
+stream = ExtResource("4_lk6ss")
