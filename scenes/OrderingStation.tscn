@@ -435,6 +435,14 @@ font_color = Color(0, 0, 0, 1)
 [node name="OrderingStationHandler" type="Node2D" unique_id=1017296139]
 script = ExtResource("1_cwj6n")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=204904939]
+z_index = -1
+offset_left = 596.0
+offset_top = 406.0
+offset_right = 636.0
+offset_bottom = 446.0
+scale = Vector2(2.26, 2.26)
+
 [node name="FoodTruckWindow" type="Sprite2D" parent="." unique_id=1606801275]
 z_index = -1
 position = Vector2(734.00006, 544)
