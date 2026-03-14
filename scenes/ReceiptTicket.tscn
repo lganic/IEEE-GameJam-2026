@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://ci08hn2ilc320" path="res://assets/receipt.png" id="1_bsmi7"]
 [ext_resource type="Script" uid="uid://cp2dadurx35f0" path="res://scripts/ReceiptTicket.gd" id="1_mivok"]
+[ext_resource type="Texture2D" uid="uid://cuww8pahmlkm3" path="res://assets/whee-redl.png" id="3_xby6v"]
+[ext_resource type="Texture2D" uid="uid://bv36u3ih24poh" path="res://assets/whee-greenl.png" id="4_t7ms1"]
 
 [node name="ReceiptTicket" type="Control" unique_id=1669881172]
 layout_mode = 3
@@ -31,3 +33,17 @@ text = "[font=res://fonts/retro-font.ttf][color=#000000][font_size=32]Testing
 Testing[/font_size][/color][/font]"
 fit_content = true
 scroll_active = false
+
+[node name="LifetimePie" type="TextureProgressBar" parent="." unique_id=1522405716]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 24.000002
+offset_right = 56.0
+offset_bottom = 74.0
+scale = Vector2(0.465, 0.465)
+max_value = 1.0
+step = 0.001
+value = 0.25
+fill_mode = 4
+texture_under = ExtResource("3_xby6v")
+texture_progress = ExtResource("4_t7ms1")

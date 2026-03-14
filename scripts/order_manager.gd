@@ -46,7 +46,10 @@ func add_order(item_id: String) -> void:
 	var receipt = receipt_scene.instantiate()
 	add_child(receipt)
 
-	receipt.setup(order["order_uid"], item_id, order_text.get(item_id, item_id))
+	receipt.setup(order["order_uid"], item_id, order_text.get(item_id, item_id), 120) # 120 is lifetime
+	
+	receipt.expired.connect(_on_receipt_expired)
+	
 	receipt_nodes.append(receipt)
 
 	_reflow_receipts()
@@ -65,13 +68,17 @@ func try_fulfill(item_id: String) -> bool:
 	
 	return false
 			
-func _remove_order_at(index: int) -> void:
+func _remove_order_at(index: int, expired: bool = false) -> void:
 	active_orders.remove_at(index)
 
 	var receipt = receipt_nodes[index]
 	receipt_nodes.remove_at(index)
 
-	receipt.play_complete_and_disappear()
+	if expired:
+		receipt.play_expire_and_disappear()
+	else:
+		receipt.play_complete_and_disappear()
+
 	_reflow_receipts()
 
 @export var possible_orders: Array[String] = ["sand-bacon-jazza", "sand-bacon-jazza-cooked"]
@@ -86,3 +93,9 @@ func spawn_random_order() -> void:
 	print("Adding " + item_id)
 	
 	add_order(item_id)
+
+func _on_receipt_expired(order_uid: int) -> void:
+	for i in range(active_orders.size()):
+		if active_orders[i]["order_uid"] == order_uid:
+			_remove_order_at(i, true)
+			return
