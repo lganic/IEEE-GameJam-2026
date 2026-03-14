@@ -10,6 +10,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_s7wlt")
+start_pos = Vector2(45, 60)
+spacing = 65.0
 
 [node name="Timer" type="Timer" parent="." unique_id=142253826]
 wait_time = 10.0

@@ -29,7 +29,7 @@ var order_text := {
 
 func _ready():
 	var timer = Timer.new()
-	timer.wait_time = 20
+	timer.wait_time = 2
 	timer.autostart = true
 	timer.one_shot = false
 	timer.timeout.connect(spawn_random_order)
