@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://coqawddbg15n3" path="res://assets/playercharacter.png" id="3_h5ip5"]
 [ext_resource type="PackedScene" uid="uid://bk75s1dq66fur" path="res://scenes/grillscene.tscn" id="4_40w10"]
 [ext_resource type="PackedScene" uid="uid://bi57xwwuhmmgc" path="res://scenes/OrderingStation.tscn" id="5_xvvcp"]
+[ext_resource type="AudioStream" uid="uid://b4pcbr87aq36g" path="res://audio/newpaycheck.wav" id="6_jn13j"]
 [ext_resource type="Script" uid="uid://cd435dyj577dx" path="res://scripts/game_manager.gd" id="6_xvvcp"]
 [ext_resource type="Script" uid="uid://bdvjt1bpd0cg3" path="res://scenes/cooking_area_manager.gd" id="7_hh5oj"]
 [ext_resource type="Script" uid="uid://ceopr3ran84x0" path="res://scripts/order_area_manager.gd" id="9_i6jx3"]
@@ -89,6 +90,17 @@ zoom = Vector2(2.88, 2.88)
 position_smoothing_enabled = true
 
 [node name="Node2D2" parent="." unique_id=1421340171 instance=ExtResource("4_40w10")]
+
+[node name="OrderManager" parent="Node2D2/Control" parent_id_path=PackedInt32Array(1421340171, 1241724224) index="0" unique_id=1399016746]
+cash_register_path = NodePath("../../../OrderingStationHandler/Label")
+
+[node name="PaycheckPlayer" type="AudioStreamPlayer2D" parent="Node2D2/Control/OrderManager" index="1" unique_id=1256587567]
+stream = ExtResource("6_jn13j")
+volume_db = -14.74
+pitch_scale = 0.87
+
+[node name="DeliveryZone" parent="Node2D2" index="13" unique_id=472155788]
+cash_register_path = NodePath("../../OrderingStationHandler/Label")
 
 [node name="OrderingStationHandler" parent="." unique_id=1017296139 instance=ExtResource("5_xvvcp")]
 position = Vector2(594, -654)

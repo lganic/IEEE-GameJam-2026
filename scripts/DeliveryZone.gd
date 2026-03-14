@@ -6,6 +6,9 @@ extends Area2D
 
 @export var match_sounds: Array[AudioStream] = []
 
+@export var cash_register_path: NodePath
+@onready var cash_register = get_node(cash_register_path)
+
 var rng := RandomNumberGenerator.new()
 
 func _ready() -> void:
@@ -20,6 +23,7 @@ func _on_body_entered(body: Node) -> void:
 	var matched = order_manager.try_fulfill(id)
 
 	if matched:
+		cash_register.AddMoney(id.length()) # OMg so lazy.
 		_play_random_match_sound()
 		body.queue_free()
 	else:

@@ -9,6 +9,11 @@ var next_order_uid := 0
 var active_orders: Array = []
 var receipt_nodes: Array = []
 
+@export var cash_register_path: NodePath
+@onready var cash_register = get_node(cash_register_path)
+
+@onready var paycheck_player: AudioStreamPlayer2D = $PaycheckPlayer
+
 var order_text := {
 	"biscuit-cooked-jazza": "BISCUIT\nJAZZA JAM",
 	"biscuit-cooked-zorp": "BISCUIT\nZORP JAM",
@@ -38,7 +43,7 @@ func add_order(item_id: String) -> void:
 	var receipt = receipt_scene.instantiate()
 	add_child(receipt)
 
-	receipt.setup(order["order_uid"], item_id, order_text.get(item_id, item_id), 120) # 120 is lifetime
+	receipt.setup(order["order_uid"], item_id, order_text.get(item_id, item_id), 60) # 60 is lifetime
 	
 	receipt.expired.connect(_on_receipt_expired)
 	
@@ -89,5 +94,7 @@ func spawn_random_order() -> void:
 func _on_receipt_expired(order_uid: int) -> void:
 	for i in range(active_orders.size()):
 		if active_orders[i]["order_uid"] == order_uid:
+			cash_register.AddMoney(-100) # Failed order penalty
+			paycheck_player.play()
 			_remove_order_at(i, true)
 			return

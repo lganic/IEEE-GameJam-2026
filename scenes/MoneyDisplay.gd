@@ -1,7 +1,12 @@
 extends Label
-func AddMoney(Amount:float):
-	text = str(Amount)
 
+var money = 0
+
+func AddMoney(Amount:float):
+
+	money = money + Amount
+
+	text = "$" + str(money)
 
 func _ready() -> void:
-	AddMoney(10.00)
+	AddMoney(0.00)
