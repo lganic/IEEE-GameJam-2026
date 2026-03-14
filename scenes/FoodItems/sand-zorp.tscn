@@ -7,7 +7,7 @@
 size = Vector2(8.8, 18)
 
 [node name="Item" unique_id=78659004 instance=ExtResource("1_j1ye3")]
-item_id = "sand-zoop"
+item_id = "sand-zorp"
 grill_result_id = "garbage"
 grill_time = 10.0
 
