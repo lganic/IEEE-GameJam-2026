@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bi57xwwuhmmgc"]
 
 [ext_resource type="Script" path="res://scenes/ordering_station.gd" id="1_cwj6n"]
+[ext_resource type="Script" uid="uid://dthwq4vy16hwd" path="res://scenes/ignore_mouse_filter.gd" id="2_7vgnf"]
 [ext_resource type="Texture2D" uid="uid://0g8krgkuycg2" path="res://assets/Glorpfile/p1-proc.png" id="2_e4ocq"]
 [ext_resource type="Texture2D" uid="uid://cm37jfepljygs" path="res://assets/Glorpfile/p2-proc.png" id="3_jdig5"]
 [ext_resource type="Texture2D" uid="uid://b4sf14xn6mwoj" path="res://assets/Glorpfile/glorp-removebg-preview_1.png" id="3_r1klw"]
@@ -443,6 +444,7 @@ offset_top = 406.0
 offset_right = 636.0
 offset_bottom = 446.0
 scale = Vector2(2.26, 2.26)
+script = ExtResource("2_7vgnf")
 
 [node name="FoodTruckWindow" type="Sprite2D" parent="." unique_id=1606801275]
 z_index = -1
