@@ -6,10 +6,91 @@ class_name RecipeManager
 
 var recipes = [
 	{
-		"inputs": ["bun", "cooked_patty", "bun"],
-		"output": "burger"
+		"inputs": ["biscuit-cooked", "jazza"],
+		"output": "biscuit-cooked-jazza"
+	},
+	{
+		"inputs": ["bread", "jazza", "bread"],
+		"output": "sand-jazza"
+	},
+	{
+		"inputs": ["bread", "jazza-cooked", "bread"],
+		"output": "sand-jazza-cooked"
+	},
+	{
+		"inputs": ["bread", "bacon-cooked", "jazza", "bread"],
+		"output": "sand-bacon-jazza"
+	},
+	{
+		"inputs": ["bread", "jazza", "bacon-cooked", "bread"],
+		"output": "sand-bacon-jazza"
+	},
+	{
+		"inputs": ["bread", "bacon-cooked", "jazza-cooked", "bread"],
+		"output": "sand-bacon-jazza-cooked"
+	},
+	{
+		"inputs": ["bread", "jazza-cooked", "bacon-cooked", "bread"],
+		"output": "sand-bacon-jazza-cooked"
+	},
+
+	{
+		"inputs": ["biscuit-cooked", "snargle"],
+		"output": "biscuit-cooked-snargle"
+	},
+	{
+		"inputs": ["bread", "snargle", "bread"],
+		"output": "sand-snargle"
+	},
+	{
+		"inputs": ["bread", "snargle-cooked", "bread"],
+		"output": "sand-snargle-cooked"
+	},
+	{
+		"inputs": ["bread", "bacon-cooked", "snargle", "bread"],
+		"output": "sand-bacon-snargle"
+	},
+	{
+		"inputs": ["bread", "snargle", "bacon-cooked", "bread"],
+		"output": "sand-bacon-snargle"
+	},
+	{
+		"inputs": ["bread", "bacon-cooked", "snargle-cooked", "bread"],
+		"output": "sand-bacon-snargle-cooked"
+	},
+	{
+		"inputs": ["bread", "snargle-cooked", "bacon-cooked", "bread"],
+		"output": "sand-bacon-snargle-cooked"
+	},
+	{
+		"inputs": ["biscuit-cooked", "zorp"],
+		"output": "biscuit-cooked-zorp"
+	},
+	{
+		"inputs": ["bread", "zorp", "bread"],
+		"output": "sand-zorp"
+	},
+	{
+		"inputs": ["bread", "zorp-cooked", "bread"],
+		"output": "sand-zorp-cooked"
+	},
+	{
+		"inputs": ["bread", "bacon-cooked", "zorp", "bread"],
+		"output": "sand-bacon-zorp"
+	},
+	{
+		"inputs": ["bread", "zorp", "bacon-cooked", "bread"],
+		"output": "sand-bacon-zorp"
+	},
+	{
+		"inputs": ["bread", "bacon-cooked", "zorp-cooked", "bread"],
+		"output": "sand-bacon-zorp-cooked"
+	},
+	{
+		"inputs": ["bread", "zorp-cooked", "bacon-cooked", "bread"],
+		"output": "sand-bacon-zorp-cooked"
 	}
-]
+];
 
 var timer := 0.0
 

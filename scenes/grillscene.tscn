@@ -4,12 +4,20 @@
 [ext_resource type="PackedScene" uid="uid://b8an1u05jflck" path="res://scenes/PlayerGrabber.tscn" id="2_rbtp0"]
 [ext_resource type="PackedScene" uid="uid://emeuqpafmaym" path="res://scenes/grill.tscn" id="3_8npoe"]
 [ext_resource type="PackedScene" uid="uid://cj6hsa6k1v0vu" path="res://scenes/RecipeManager.tscn" id="3_sunuu"]
-[ext_resource type="PackedScene" uid="uid://c7u1b7p4qi6kq" path="res://scenes/FoodItems/bun.tscn" id="4_piee8"]
 [ext_resource type="PackedScene" uid="uid://qhlmh263l0vb" path="res://scenes/PoofEffect.tscn" id="5_fiep1"]
 [ext_resource type="PackedScene" uid="uid://cm856e00iw7c" path="res://scenes/ItemDatabase.tscn" id="5_fyaf1"]
-[ext_resource type="PackedScene" uid="uid://b7qcc61up2mui" path="res://scenes/FoodItems/patty.tscn" id="5_sunuu"]
-[ext_resource type="PackedScene" uid="uid://cf2m1wo0037y8" path="res://scenes/FoodItems/uncooked.tscn" id="6_8npoe"]
-[ext_resource type="Texture2D" uid="uid://ci0f4yi3scu8w" path="res://scenes/FoodItems/bun.png" id="8_y55k7"]
+[ext_resource type="Texture2D" uid="uid://1j4ss218jpox" path="res://assets/wood (1).png" id="7_6vbwl"]
+[ext_resource type="PackedScene" uid="uid://d2ckfrrukhl4k" path="res://scenes/Dispensers/BaconDispenser.tscn" id="9_8w17c"]
+[ext_resource type="PackedScene" uid="uid://dji7vt8xk4ie5" path="res://scenes/Dispensers/BiscuitDispenser.tscn" id="10_7tmmr"]
+[ext_resource type="PackedScene" uid="uid://bh0pugqh2rrqt" path="res://scenes/HandCursor.tscn" id="11_6vbwl"]
+[ext_resource type="PackedScene" uid="uid://cf2kpdmd33u87" path="res://scenes/Dispensers/BunDispenser.tscn" id="11_wie6h"]
+[ext_resource type="PackedScene" uid="uid://dsm43opr60ult" path="res://scenes/Dispensers/jazzaDispenser.tscn" id="12_wie6h"]
+[ext_resource type="PackedScene" uid="uid://bcgeq7bgxpkl1" path="res://scenes/Dispensers/SnargleDispenser.tscn" id="13_187va"]
+[ext_resource type="PackedScene" uid="uid://dgjbif7ovnj4n" path="res://scenes/Dispensers/ZorpDispenser.tscn" id="14_0cl04"]
+[ext_resource type="PackedScene" uid="uid://jl3nc1041rsw" path="res://scenes/OrderManager.tscn" id="15_0cl04"]
+[ext_resource type="PackedScene" uid="uid://cywr47okunqv3" path="res://scenes/DeliveryZone.tscn" id="15_187va"]
+[ext_resource type="PackedScene" uid="uid://bb3e2h0hg2akb" path="res://scenes/ReceiptTicket.tscn" id="16_23817"]
+[ext_resource type="Texture2D" uid="uid://c6qcxra77p7lg" path="res://assets/posters.png" id="18_7x280"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3wacy"]
 atlas = ExtResource("1_dhc3s")
@@ -60,12 +68,13 @@ size = Vector2(333, 20)
 [node name="Node2D" type="Node2D" unique_id=1421340171]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2074743469]
+scale = Vector2(1, 1.0400003)
 sprite_frames = SubResource("SpriteFrames_8npoe")
 autoplay = "default"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1453666503]
-position = Vector2(-36, 0)
-zoom = Vector2(2.64, 2.64)
+position = Vector2(-67, 3)
+zoom = Vector2(4.37, 4.37)
 
 [node name="PlayerGrabber" parent="." unique_id=1821917048 instance=ExtResource("2_rbtp0")]
 
@@ -76,25 +85,93 @@ poof_effect_scene = ExtResource("5_fiep1")
 
 [node name="ItemDatabase" parent="." unique_id=173001445 instance=ExtResource("5_fyaf1")]
 
-[node name="Item" parent="." unique_id=78659004 instance=ExtResource("6_8npoe")]
-position = Vector2(91, 5)
-
-[node name="Item2" parent="." unique_id=2041909224 instance=ExtResource("4_piee8")]
-position = Vector2(35, 19)
-
-[node name="Item3" parent="." unique_id=181922884 instance=ExtResource("4_piee8")]
-position = Vector2(27, -12)
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1789826998]
 position = Vector2(97, 61)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=324515681]
-scale = Vector2(3.3200014, 1)
-texture = ExtResource("8_y55k7")
+rotation = -1.5707964
+scale = Vector2(1.320003, 5.2)
+texture = ExtResource("7_6vbwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=596982912]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_uv6o0")
 
-[node name="Item4" parent="." unique_id=18287005 instance=ExtResource("5_sunuu")]
-position = Vector2(-28, 13)
+[node name="HandCursor" parent="." unique_id=668411722 instance=ExtResource("11_6vbwl")]
+
+[node name="Dispensers" type="Node2D" parent="." unique_id=1217348228]
+
+[node name="Sprite2D" type="Sprite2D" parent="Dispensers" unique_id=936984953]
+position = Vector2(16.6324, -77)
+rotation = -1.5707964
+scale = Vector2(0.8061899, 2.2385125)
+texture = ExtResource("7_6vbwl")
+
+[node name="FoodDispenser" parent="Dispensers" unique_id=519732630 instance=ExtResource("9_8w17c")]
+position = Vector2(-33.3676, -95)
+scale = Vector2(0.6400012, 0.64)
+
+[node name="FoodDispenser2" parent="Dispensers" unique_id=1440851222 instance=ExtResource("10_7tmmr")]
+position = Vector2(12.6324, -95)
+scale = Vector2(0.6400012, 0.64)
+
+[node name="FoodDispenser3" parent="Dispensers" unique_id=627496667 instance=ExtResource("11_wie6h")]
+position = Vector2(60.6324, -96)
+scale = Vector2(0.64, 0.64)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Dispensers" unique_id=150757055]
+position = Vector2(16, -25)
+rotation = -1.5707964
+scale = Vector2(0.68994343, 2.250939)
+texture = ExtResource("7_6vbwl")
+
+[node name="FoodDispenser4" parent="Dispensers" unique_id=29627514 instance=ExtResource("12_wie6h")]
+position = Vector2(62, -40)
+scale = Vector2(0.64, 0.64)
+
+[node name="FoodDispenser5" parent="Dispensers" unique_id=1778891613 instance=ExtResource("13_187va")]
+position = Vector2(15, -40)
+scale = Vector2(0.64, 0.64)
+
+[node name="FoodDispenser6" parent="Dispensers" unique_id=173100050 instance=ExtResource("14_0cl04")]
+position = Vector2(-32, -39)
+scale = Vector2(0.64, 0.64)
+
+[node name="Control" type="Control" parent="." unique_id=1241724224]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1.0
+offset_bottom = 1.0
+
+[node name="OrderManager" parent="Control" unique_id=1399016746 instance=ExtResource("15_0cl04")]
+layout_mode = 1
+receipt_scene = ExtResource("16_23817")
+possible_orders = Array[String](["biscuit-cooked-jazza", "biscuit-cooked-zorp", "biscuit-cooked-snargle", "sand-jazza", "sand-zorp", "sand-snargle", "sand-jazza-cooked", "sand-zorp-cooked", "sand-snargle-cooked", "sand-bacon-jazza", "sand-bacon-zorp", "sand-bacon-snargle", "sand-bacon-jazza-cooked", "sand-bacon-zorp-cooked", "sand-bacon-snargle-cooked"])
+
+[node name="DeliveryZone" parent="." unique_id=472155788 instance=ExtResource("15_187va")]
+position = Vector2(-254, -2)
+order_manager_path = NodePath("../Control/OrderManager")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=399390927]
+position = Vector2(-152, -85)
+rotation = 0.19137335
+scale = Vector2(0.435, 0.435)
+texture = ExtResource("18_7x280")
+region_enabled = true
+region_rect = Rect2(263.3309, 0, 120.081696, 128)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=560725284]
+position = Vector2(-199.99998, -77)
+rotation = -0.45751405
+scale = Vector2(0.435, 0.435)
+texture = ExtResource("18_7x280")
+region_enabled = true
+region_rect = Rect2(131.44635, 0, 123.67386, 128)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1109039417]
+position = Vector2(-101.000015, -69)
+rotation = 0.48142388
+scale = Vector2(0.435, 0.435)
+texture = ExtResource("18_7x280")
+region_enabled = true
+region_rect = Rect2(0, 0, 131.47765, 128)

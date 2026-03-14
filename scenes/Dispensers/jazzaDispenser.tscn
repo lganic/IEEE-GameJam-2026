@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dsm43opr60ult"]
+
+[ext_resource type="PackedScene" uid="uid://bcp2e4fbk8rn7" path="res://scenes/Dispensers/FoodDispenser.tscn" id="1_gtkt1"]
+[ext_resource type="Texture2D" uid="uid://deaoov3xl0sj8" path="res://assets/dispensers.png" id="2_mr7v5"]
+[ext_resource type="PackedScene" uid="uid://bv5b5lew4fmab" path="res://scenes/FoodItems/jazza.tscn" id="2_vjd56"]
+[ext_resource type="AudioStream" uid="uid://dfjfvwfmnddss" path="res://audio/squelchy.wav" id="4_vjd56"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vjd56"]
+size = Vector2(52, 56)
+
+[node name="FoodDispenser" unique_id=519732630 instance=ExtResource("1_gtkt1")]
+scene_to_spawn = ExtResource("2_vjd56")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=1771295]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_vjd56")
+
+[node name="Sprite2D" parent="." index="1" unique_id=145798283]
+texture = ExtResource("2_mr7v5")
+region_enabled = true
+region_rect = Rect2(0, 256.05756, 64, 60.163696)
+
+[node name="AudioStreamPlayer2D" parent="." index="2" unique_id=892334725]
+stream = ExtResource("4_vjd56")

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://jl3nc1041rsw"]
+
+[ext_resource type="Script" uid="uid://d0k5v83johh6d" path="res://scripts/order_manager.gd" id="1_s7wlt"]
+
+[node name="OrderManager" type="Control" unique_id=1399016746]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s7wlt")
+
+[node name="Timer" type="Timer" parent="." unique_id=142253826]
+wait_time = 10.0

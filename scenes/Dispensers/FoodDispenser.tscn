@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bcp2e4fbk8rn7"]
+
+[ext_resource type="Texture2D" uid="uid://b51c1q20gw5xx" path="res://scenes/FoodItems/jellypatty.png" id="1_kvsh7"]
+[ext_resource type="Script" uid="uid://dlrhxbd8q1lth" path="res://scripts/food_dispenser.gd" id="1_tvssc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tvssc"]
+size = Vector2(40, 56)
+
+[node name="FoodDispenser" type="Area2D" unique_id=519732630]
+script = ExtResource("1_tvssc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1771295]
+shape = SubResource("RectangleShape2D_tvssc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=145798283]
+texture = ExtResource("1_kvsh7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=892334725]

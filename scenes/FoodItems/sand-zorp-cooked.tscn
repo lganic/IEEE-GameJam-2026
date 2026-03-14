@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cyusp5s30lxr5"]
+
+[ext_resource type="PackedScene" uid="uid://bmkokly4q6oj3" path="res://scenes/FoodItems/item.tscn" id="1_hjq07"]
+[ext_resource type="Texture2D" uid="uid://cn70kuxfroiig" path="res://scenes/FoodItems/baseburger.png" id="2_x23oj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjq07"]
+size = Vector2(8.8, 19)
+
+[node name="Item" unique_id=78659004 instance=ExtResource("1_hjq07")]
+item_id = "sand-zorp-cooked"
+grill_result_id = "garbage"
+grill_time = 10.0
+
+[node name="Sprite2D" parent="." index="0" unique_id=1862774044]
+position = Vector2(-3.0994415e-06, -3.5513778)
+scale = Vector2(0.68749994, 0.72681713)
+texture = ExtResource("2_x23oj")
+region_enabled = true
+region_rect = Rect2(0, 36.956367, 64, 26.850033)
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=511094793]
+position = Vector2(0, -3.5)
+shape = SubResource("RectangleShape2D_hjq07")
