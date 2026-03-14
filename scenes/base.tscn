@@ -92,6 +92,7 @@ position_smoothing_enabled = true
 
 [node name="OrderingStationHandler" parent="." unique_id=1017296139 instance=ExtResource("5_xvvcp")]
 position = Vector2(594, -654)
+receipt_manager_path = NodePath("../Node2D2/Control/OrderManager")
 
 [node name="GameManager" type="Node2D" parent="." unique_id=1733052560]
 script = ExtResource("6_xvvcp")

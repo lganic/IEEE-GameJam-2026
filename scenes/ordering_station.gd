@@ -9,6 +9,9 @@ extends Node2D
 @export var speech_bubble_scene: PackedScene
 @export var speech_bubble_spawn_offset: Vector2 = Vector2(-280, 50)
 
+@export var receipt_manager_path: NodePath
+@onready var receipt_manager = get_node(receipt_manager_path)
+
 var current_customer: int = 0
 var current_order_key: String = ""
 var current_bubble: Node = null
@@ -120,6 +123,8 @@ func _on_bubble_clicked() -> void:
 	paper_player.play()
 
 	remove_customer()
+	
+	receipt_manager.add_order(current_order_key)
 
 func _on_intro_cinematic_anim_animation_finished(anim_name: StringName) -> void:
 	spawn_customer("Glorp")

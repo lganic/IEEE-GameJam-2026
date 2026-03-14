@@ -14,8 +14,6 @@ func _process(_delta: float) -> void:
 
 	var target_position = screen_mouse_pos + local_offset
 
-	print(world_mouse_pos)
-
 	if world_mouse_pos.x < -231 or world_mouse_pos.x > 95 or world_mouse_pos.y < -127 or world_mouse_pos.y > 130:
 		target_position = Vector2(-10000,0)
 
