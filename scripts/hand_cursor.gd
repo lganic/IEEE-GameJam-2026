@@ -14,7 +14,10 @@ func _process(_delta: float) -> void:
 
 	var target_position = screen_mouse_pos + local_offset
 
-	target_position = target_position.clamp(Vector2(-3000, 3000), Vector2(-300, 300)) # Hacky way of ensuring that the hand doesnt leak into the main scene.
+	print(world_mouse_pos)
+
+	if world_mouse_pos.x < -231 or world_mouse_pos.x > 95 or world_mouse_pos.y < -127 or world_mouse_pos.y > 130:
+		target_position = Vector2(-10000,0)
 
 	# Hand sprite stays in screen/UI space
 	hand_sprite.global_position = target_position

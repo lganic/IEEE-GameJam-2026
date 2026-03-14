@@ -653,6 +653,7 @@ script = ExtResource("1_snb2a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2081693755]
 modulate = Color(1, 1, 1, 0.46666667)
+self_modulate = Color(0.4509804, 0.26666668, 0.6392157, 1)
 position = Vector2(0, -1)
 scale = Vector2(1.775, 1.731)
 sprite_frames = SubResource("SpriteFrames_0ipyc")
