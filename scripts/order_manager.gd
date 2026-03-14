@@ -24,7 +24,7 @@ var order_text := {
 	"sand-bacon-snargle": "BACON\nSNARGLE JAM\nSANDWICH",
 	"sand-bacon-jazza-cooked": "BACON\nJAZZA JAM\nCOOKED\nSANDWICH",
 	"sand-bacon-zorp-cooked": "BACON\nZORP JAM\nCOOKED\nSANDWICH",
-	"sand-bacon-snargle-cooked": "BACON\nZARGLE JAM\nCOOKED\nSANDWICH",
+	"sand-bacon-snargle-cooked": "BACON\nSNARGLE JAM\nCOOKED\nSANDWICH",
 }
 
 func _ready():
