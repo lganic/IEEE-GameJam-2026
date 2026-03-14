@@ -3,12 +3,20 @@ extends Node2D
 @onready var customer_sprite: AnimatedSprite2D = $Customer
 @onready var customer_animation: AnimationPlayer = $"Customer Animation"
 
+@onready var meep_player: AudioStreamPlayer2D = $"MeepPlayer"
+@onready var paper_player: AudioStreamPlayer2D = $"PaperPlayer"
+
 @export var speech_bubble_scene: PackedScene
 @export var speech_bubble_spawn_offset: Vector2 = Vector2(-280, 50)
 
 var current_customer: int = 0
 var current_order_key: String = ""
 var current_bubble: Node = null
+
+var rng := RandomNumberGenerator.new()
+
+func _ready() -> void:
+	rng.randomize()
 
 #Some customer names: Glorp, GortandSon, Karen.
 var order_text := {
@@ -61,6 +69,9 @@ func remove_customer() -> void:
 
 func _spawn_order_bubble(meh: StringName) -> void:
 	
+	meep_player.pitch_scale = rng.randf_range(.75, 1.25)
+	meep_player.play()
+	
 	customer_animation.animation_finished.disconnect(_spawn_order_bubble) # Just to be safe
 	
 	# Remove old bubble if one exists
@@ -106,6 +117,8 @@ func _on_bubble_clicked() -> void:
 		current_bubble.queue_free()
 		current_bubble = null
 	
+	paper_player.play()
+
 	remove_customer()
 
 func _on_intro_cinematic_anim_animation_finished(anim_name: StringName) -> void:

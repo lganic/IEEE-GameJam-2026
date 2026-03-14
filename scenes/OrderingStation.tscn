@@ -27,6 +27,8 @@
 [ext_resource type="FontFile" uid="uid://gjr6ohpujnpf" path="res://fonts/retro-font.ttf" id="23_hreya"]
 [ext_resource type="Script" path="res://scenes/MoneyDisplay.gd" id="24_h6yss"]
 [ext_resource type="Texture2D" uid="uid://crssjvaho3qx" path="res://assets/Arial.jpg" id="25_h6yss"]
+[ext_resource type="AudioStream" uid="uid://b0qav6dtp4ail" path="res://audio/meep.wav" id="28_xqjsk"]
+[ext_resource type="AudioStream" uid="uid://dk3gwclos7o4i" path="res://audio/paper.wav" id="29_s0wv0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s6rdn"]
 animations = [{
@@ -530,5 +532,13 @@ z_index = -1
 position = Vector2(265.00003, 250)
 scale = Vector2(0.225, 0.225)
 texture = ExtResource("25_h6yss")
+
+[node name="MeepPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1390305526]
+stream = ExtResource("28_xqjsk")
+
+[node name="PaperPlayer" type="AudioStreamPlayer2D" parent="." unique_id=263276639]
+position = Vector2(265.00003, 250)
+scale = Vector2(0.225, 0.225)
+stream = ExtResource("29_s0wv0")
 
 [connection signal="animation_finished" from="Intro Cinematic/Intro Cinematic Anim" to="." method="_on_intro_cinematic_anim_animation_finished"]
