@@ -1,0 +1,538 @@
+[gd_scene load_steps=35 format=3 uid="uid://cvxuhj7tkdg5c"]
+
+[ext_resource type="Script" uid="uid://cq3crcu1kyiry" path="res://scenes/ordering_station.gd" id="1_cwj6n"]
+[ext_resource type="Texture2D" uid="uid://0g8krgkuycg2" path="res://assets/Glorpfile/p1-proc.png" id="2_e4ocq"]
+[ext_resource type="Texture2D" uid="uid://cm37jfepljygs" path="res://assets/Glorpfile/p2-proc.png" id="3_jdig5"]
+[ext_resource type="Texture2D" uid="uid://b4sf14xn6mwoj" path="res://assets/Glorpfile/glorp-removebg-preview_1.png" id="3_r1klw"]
+[ext_resource type="Texture2D" uid="uid://csdchonrw8oh" path="res://assets/Glorpfile/glorp_talking-removebg-preview_1.png" id="4_dh8a3"]
+[ext_resource type="Texture2D" uid="uid://dx57xc484w4cm" path="res://assets/Glorpfile/p3-proc.png" id="4_s6rdn"]
+[ext_resource type="Texture2D" uid="uid://dld46rtikd21g" path="res://assets/Glorpfile/p4-proc.png" id="5_6prrn"]
+[ext_resource type="Texture2D" uid="uid://cn3tmawndqwep" path="res://assets/Glorpfile/FOOD_TRUCK_WINDOW.png" id="5_e4ocq"]
+[ext_resource type="Texture2D" uid="uid://ej7ad3jogq7g" path="res://assets/Glorpfile/glorp_happy-removebg-preview_1.png" id="5_lsd48"]
+[ext_resource type="Texture2D" uid="uid://dmi2ld8lhxxwq" path="res://assets/Glorpfile/most-colorful-view-universe-nasa-space-hubble-telescope.webp" id="6_jdig5"]
+[ext_resource type="Texture2D" uid="uid://bumj7i3c4r7" path="res://assets/Glorpfile/glorp_angry-removebg-preview.png" id="6_u6sgt"]
+[ext_resource type="Script" uid="uid://duv1el6ywppv0" path="res://scenes/animation_player.gd" id="7_s6rdn"]
+[ext_resource type="Texture2D" uid="uid://hxhfroja2p8" path="res://assets/Glorpfile/splash-rem.png" id="7_st6xb"]
+[ext_resource type="AudioStream" uid="uid://deknacoisagk7" path="res://audio/newvrec.wav" id="8_q2e6n"]
+[ext_resource type="Texture2D" uid="uid://gqhbgs27uk5w" path="res://assets/Glorpfile/gort_and_son-removebg-preview.png" id="8_x4ipw"]
+[ext_resource type="Texture2D" uid="uid://b3mss3vu3tg5m" path="res://assets/Glorpfile/gort_and_son_talking-removebg-preview_1.png" id="9_hreya"]
+[ext_resource type="Texture2D" uid="uid://xyw40b5k5ia" path="res://assets/Glorpfile/gort_and_son_happy-removebg-preview_1.png" id="10_h6yss"]
+[ext_resource type="AudioStream" uid="uid://cr48dorn3stfs" path="res://audio/bwaaaa-bwoaaaa.wav" id="10_st6xb"]
+[ext_resource type="Texture2D" uid="uid://b2fjy2c1xckbj" path="res://assets/Glorpfile/gort_and_son_angry-removebg-preview.png" id="11_7vgnf"]
+[ext_resource type="Texture2D" uid="uid://cpmnptqdj0cdv" path="res://assets/Glorpfile/karen_angry-removebg-preview.png" id="12_lifl1"]
+[ext_resource type="Texture2D" uid="uid://bkustvcwvgnx" path="res://assets/Glorpfile/karen-removebg-preview.png" id="13_xqjsk"]
+[ext_resource type="Texture2D" uid="uid://cwptg21fg11el" path="res://assets/Glorpfile/karen_talking-removebg-preview.png" id="14_s0wv0"]
+[ext_resource type="FontFile" uid="uid://gjr6ohpujnpf" path="res://fonts/retro-font.ttf" id="23_hreya"]
+[ext_resource type="Script" uid="uid://ddlqa11avldc7" path="res://scenes/MoneyDisplay.gd" id="24_h6yss"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s6rdn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_r1klw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dh8a3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lsd48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u6sgt")
+}],
+"loop": true,
+"name": &"Glorp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_x4ipw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hreya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h6yss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7vgnf")
+}],
+"loop": true,
+"name": &"GortandSon",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e4ocq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jdig5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s6rdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6prrn")
+}],
+"loop": true,
+"name": &"John",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_lifl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xqjsk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_s0wv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_lifl1")
+}],
+"loop": true,
+"name": &"Karen",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_jdig5"]
+resource_name = "Intro Cinematic"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Intro Cinematic/ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.8666666, 4.866667),
+"transitions": PackedFloat32Array(1, -0.5, -0.5),
+"update": 0,
+"values": [1.0, 1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Intro Cinematic/Manager:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4.9, 6.9, 12.2, 14),
+"transitions": PackedFloat32Array(-1.5, -1.5, -1.5, 1),
+"update": 0,
+"values": [1888.9999, 700.0, 700.0, 1889.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Intro Cinematic/Manager:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(4.9, 5.133333, 5.4, 5.633333, 5.866667, 6.133333, 6.366667, 6.6000004, 6.8999996, 12.3, 12.533334, 12.8, 13.033334, 13.266667, 13.533334, 13.766667, 14.000001, 14.3),
+"transitions": PackedFloat32Array(-1.5, -1.5, -1.5, -1.5, -1.5, -1.5, -1.5, -1.5, -1.5, -1.5, -1.5, -1.5, -1.5, -1.5, -1.5, -1.5, -1.5, -1.5),
+"update": 0,
+"values": [537.00006, 600.0, 537.00006, 600.0, 537.00006, 600.0, 537.00006, 600.0, 537.00006, 537.00006, 600.0, 537.00006, 600.0, 537.00006, 600.0, 537.00006, 600.0, 537.00006]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Intro Cinematic/Manager:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4.9, 5.133333, 5.366667, 5.6000004, 5.8333335, 6.0666666, 6.3, 6.5333333, 6.766667, 6.9, 7.4666667, 7.5666666, 7.6666665, 7.766667, 8.2, 8.433333, 8.533334, 8.6, 8.8, 8.900001, 9.033334, 9.333333, 9.466666, 9.840301, 9.973634, 10.273634, 10.406967, 10.738978, 10.872312, 11.033334, 11.2, 12, 12.133333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Intro Cinematic/Manager:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(4.9, 6.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"Idle", &"Talking"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Audio/Manager Voice:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 6.9333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Audio/Music:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Intro Cinematic/Title:modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.033333335, 0.8333333, 2.8666666, 4.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Intro Cinematic:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 14),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_s6rdn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Intro Cinematic/ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Intro Cinematic/Manager:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1888.9999]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Intro Cinematic/Manager:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [537.00006]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Intro Cinematic/Manager:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Intro Cinematic/Manager:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Talking"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Audio/Manager Voice:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Audio/Music:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Intro Cinematic/Title:modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Intro Cinematic:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6prrn"]
+_data = {
+&"Intro Cinematic": SubResource("Animation_jdig5"),
+&"RESET": SubResource("Animation_s6rdn")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q2e6n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e4ocq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s6rdn")
+}],
+"loop": true,
+"name": &"Happy",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_6prrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_e4ocq")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e4ocq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jdig5")
+}],
+"loop": true,
+"name": &"Talking",
+"speed": 2.0
+}]
+
+[sub_resource type="Animation" id="Animation_6ty61"]
+resource_name = "Customer Enter"
+length = 2.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Customer:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.6, 2.2333333),
+"transitions": PackedFloat32Array(-1.5, -1.5, -1.5),
+"update": 0,
+"values": [1500.0, 850.0, 900.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Customer:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.16666667, 0.43333334, 0.7666667, 1.1, 1.3666667, 1.7666667, 2.2333333),
+"transitions": PackedFloat32Array(-1.5, -1.5, -1.5, -1.5, -1.5, -1.5, -1.5),
+"update": 0,
+"values": [264.0, 320.0, 264.0, 320.0, 264.0, 320.0, 264.0]
+}
+
+[sub_resource type="Animation" id="Animation_hgivo"]
+resource_name = "Customer Leave"
+length = 2.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Customer:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.2333333),
+"transitions": PackedFloat32Array(-1.5, -1.5),
+"update": 0,
+"values": [900.0, 2000.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Customer:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.6, 0.93333334, 1.2, 1.5, 1.7333333, 2.2333333),
+"transitions": PackedFloat32Array(-1.5, -1.5, -1.5, -1.5, -1.5, -1.5, -1.5, -1.5),
+"update": 0,
+"values": [264.0, 320.0, 264.0, 320.0, 264.0, 320.0, 264.0, 320.0]
+}
+
+[sub_resource type="Animation" id="Animation_xev2s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Customer:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [887.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Customer:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [264.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mduis"]
+_data = {
+&"Customer Enter": SubResource("Animation_6ty61"),
+&"Customer Leave": SubResource("Animation_hgivo"),
+&"RESET": SubResource("Animation_xev2s")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_7vgnf"]
+font = ExtResource("23_hreya")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[node name="OrderingStationHandler" type="Node2D"]
+script = ExtResource("1_cwj6n")
+
+[node name="FoodTruckWindow" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(734.00006, 544)
+scale = Vector2(3.7, 3.7)
+texture = ExtResource("5_e4ocq")
+
+[node name="Space" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(954, 361)
+scale = Vector2(0.3890909, 0.39604685)
+texture = ExtResource("6_jdig5")
+
+[node name="Customer" type="AnimatedSprite2D" parent="."]
+visible = false
+z_index = -2
+position = Vector2(887, 264)
+sprite_frames = SubResource("SpriteFrames_s6rdn")
+animation = &"John"
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="Manager Voice" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("8_q2e6n")
+volume_db = 20.0
+
+[node name="Music" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("10_st6xb")
+
+[node name="Intro Cinematic" type="Node2D" parent="."]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="Intro Cinematic Anim" type="AnimationPlayer" parent="Intro Cinematic"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_6prrn")
+}
+script = ExtResource("7_s6rdn")
+
+[node name="Manager" type="AnimatedSprite2D" parent="Intro Cinematic"]
+position = Vector2(1888.9999, 537.00006)
+scale = Vector2(7, 7)
+sprite_frames = SubResource("SpriteFrames_q2e6n")
+animation = &"Talking"
+frame = 1
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Sprite2D" parent="Intro Cinematic"]
+z_index = 1
+position = Vector2(706, 605)
+scale = Vector2(2.9790123, 2.96)
+texture = ExtResource("7_st6xb")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Intro Cinematic"]
+offset_left = -35.0
+offset_top = -21.0
+offset_right = 1506.0
+offset_bottom = 1181.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="Customer Animation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_mduis")
+}
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1128.0
+offset_top = 395.0
+offset_right = 1228.0
+offset_bottom = 418.0
+text = "$0.00"
+label_settings = SubResource("LabelSettings_7vgnf")
+script = ExtResource("24_h6yss")
+
+[connection signal="animation_finished" from="Intro Cinematic/Intro Cinematic Anim" to="." method="_on_intro_cinematic_anim_animation_finished"]
