@@ -532,7 +532,7 @@ label_settings = SubResource("LabelSettings_7vgnf")
 script = ExtResource("24_h6yss")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=905765963]
-position = Vector2(731, 548)
+position = Vector2(731, 550)
 zoom = Vector2(0.55, 0.55)
 
 [connection signal="animation_finished" from="Intro Cinematic/Intro Cinematic Anim" to="." method="_on_intro_cinematic_anim_animation_finished"]
