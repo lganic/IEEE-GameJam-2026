@@ -1,6 +1,6 @@
-[gd_scene load_steps=35 format=3 uid="uid://cvxuhj7tkdg5c"]
+[gd_scene format=3 uid="uid://bi57xwwuhmmgc"]
 
-[ext_resource type="Script" uid="uid://cq3crcu1kyiry" path="res://scenes/ordering_station.gd" id="1_cwj6n"]
+[ext_resource type="Script" path="res://scenes/ordering_station.gd" id="1_cwj6n"]
 [ext_resource type="Texture2D" uid="uid://0g8krgkuycg2" path="res://assets/Glorpfile/p1-proc.png" id="2_e4ocq"]
 [ext_resource type="Texture2D" uid="uid://cm37jfepljygs" path="res://assets/Glorpfile/p2-proc.png" id="3_jdig5"]
 [ext_resource type="Texture2D" uid="uid://b4sf14xn6mwoj" path="res://assets/Glorpfile/glorp-removebg-preview_1.png" id="3_r1klw"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ej7ad3jogq7g" path="res://assets/Glorpfile/glorp_happy-removebg-preview_1.png" id="5_lsd48"]
 [ext_resource type="Texture2D" uid="uid://dmi2ld8lhxxwq" path="res://assets/Glorpfile/most-colorful-view-universe-nasa-space-hubble-telescope.webp" id="6_jdig5"]
 [ext_resource type="Texture2D" uid="uid://bumj7i3c4r7" path="res://assets/Glorpfile/glorp_angry-removebg-preview.png" id="6_u6sgt"]
-[ext_resource type="Script" uid="uid://duv1el6ywppv0" path="res://scenes/animation_player.gd" id="7_s6rdn"]
+[ext_resource type="Script" path="res://scenes/animation_player.gd" id="7_s6rdn"]
 [ext_resource type="Texture2D" uid="uid://hxhfroja2p8" path="res://assets/Glorpfile/splash-rem.png" id="7_st6xb"]
 [ext_resource type="AudioStream" uid="uid://deknacoisagk7" path="res://audio/newvrec.wav" id="8_q2e6n"]
 [ext_resource type="Texture2D" uid="uid://gqhbgs27uk5w" path="res://assets/Glorpfile/gort_and_son-removebg-preview.png" id="8_x4ipw"]
@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://bkustvcwvgnx" path="res://assets/Glorpfile/karen-removebg-preview.png" id="13_xqjsk"]
 [ext_resource type="Texture2D" uid="uid://cwptg21fg11el" path="res://assets/Glorpfile/karen_talking-removebg-preview.png" id="14_s0wv0"]
 [ext_resource type="FontFile" uid="uid://gjr6ohpujnpf" path="res://fonts/retro-font.ttf" id="23_hreya"]
-[ext_resource type="Script" uid="uid://ddlqa11avldc7" path="res://scenes/MoneyDisplay.gd" id="24_h6yss"]
+[ext_resource type="Script" path="res://scenes/MoneyDisplay.gd" id="24_h6yss"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s6rdn"]
 animations = [{
@@ -456,49 +456,47 @@ font = ExtResource("23_hreya")
 font_size = 20
 font_color = Color(0, 0, 0, 1)
 
-[node name="OrderingStationHandler" type="Node2D"]
+[node name="OrderingStationHandler" type="Node2D" unique_id=1017296139]
 script = ExtResource("1_cwj6n")
 
-[node name="FoodTruckWindow" type="Sprite2D" parent="."]
+[node name="FoodTruckWindow" type="Sprite2D" parent="." unique_id=1606801275]
 z_index = -1
 position = Vector2(734.00006, 544)
 scale = Vector2(3.7, 3.7)
 texture = ExtResource("5_e4ocq")
 
-[node name="Space" type="Sprite2D" parent="."]
+[node name="Space" type="Sprite2D" parent="." unique_id=2105371058]
 z_index = -2
 position = Vector2(954, 361)
 scale = Vector2(0.3890909, 0.39604685)
 texture = ExtResource("6_jdig5")
 
-[node name="Customer" type="AnimatedSprite2D" parent="."]
+[node name="Customer" type="AnimatedSprite2D" parent="." unique_id=663093571]
 visible = false
 z_index = -2
 position = Vector2(887, 264)
 sprite_frames = SubResource("SpriteFrames_s6rdn")
 animation = &"John"
 
-[node name="Audio" type="Node" parent="."]
+[node name="Audio" type="Node" parent="." unique_id=1709762250]
 
-[node name="Manager Voice" type="AudioStreamPlayer2D" parent="Audio"]
+[node name="Manager Voice" type="AudioStreamPlayer2D" parent="Audio" unique_id=644507245]
 stream = ExtResource("8_q2e6n")
 volume_db = 20.0
 
-[node name="Music" type="AudioStreamPlayer2D" parent="Audio"]
+[node name="Music" type="AudioStreamPlayer2D" parent="Audio" unique_id=1751412786]
 stream = ExtResource("10_st6xb")
 
-[node name="Intro Cinematic" type="Node2D" parent="."]
+[node name="Intro Cinematic" type="Node2D" parent="." unique_id=1264984758]
 visible = false
 metadata/_edit_lock_ = true
 
-[node name="Intro Cinematic Anim" type="AnimationPlayer" parent="Intro Cinematic"]
+[node name="Intro Cinematic Anim" type="AnimationPlayer" parent="Intro Cinematic" unique_id=534632728]
 root_node = NodePath("../..")
-libraries = {
-&"": SubResource("AnimationLibrary_6prrn")
-}
+libraries/ = SubResource("AnimationLibrary_6prrn")
 script = ExtResource("7_s6rdn")
 
-[node name="Manager" type="AnimatedSprite2D" parent="Intro Cinematic"]
+[node name="Manager" type="AnimatedSprite2D" parent="Intro Cinematic" unique_id=1164699377]
 position = Vector2(1888.9999, 537.00006)
 scale = Vector2(7, 7)
 sprite_frames = SubResource("SpriteFrames_q2e6n")
@@ -506,14 +504,14 @@ animation = &"Talking"
 frame = 1
 metadata/_edit_lock_ = true
 
-[node name="Title" type="Sprite2D" parent="Intro Cinematic"]
+[node name="Title" type="Sprite2D" parent="Intro Cinematic" unique_id=1839147379]
 z_index = 1
 position = Vector2(706, 605)
 scale = Vector2(2.9790123, 2.96)
 texture = ExtResource("7_st6xb")
 metadata/_edit_lock_ = true
 
-[node name="ColorRect" type="ColorRect" parent="Intro Cinematic"]
+[node name="ColorRect" type="ColorRect" parent="Intro Cinematic" unique_id=526018295]
 offset_left = -35.0
 offset_top = -21.0
 offset_right = 1506.0
@@ -521,12 +519,10 @@ offset_bottom = 1181.0
 color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
 
-[node name="Customer Animation" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_mduis")
-}
+[node name="Customer Animation" type="AnimationPlayer" parent="." unique_id=904060498]
+libraries/ = SubResource("AnimationLibrary_mduis")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1071581777]
 offset_left = 1128.0
 offset_top = 395.0
 offset_right = 1228.0
@@ -534,5 +530,9 @@ offset_bottom = 418.0
 text = "$0.00"
 label_settings = SubResource("LabelSettings_7vgnf")
 script = ExtResource("24_h6yss")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=905765963]
+position = Vector2(731, 548)
+zoom = Vector2(0.55, 0.55)
 
 [connection signal="animation_finished" from="Intro Cinematic/Intro Cinematic Anim" to="." method="_on_intro_cinematic_anim_animation_finished"]
