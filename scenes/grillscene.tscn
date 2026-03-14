@@ -17,7 +17,14 @@
 [ext_resource type="PackedScene" uid="uid://jl3nc1041rsw" path="res://scenes/OrderManager.tscn" id="15_0cl04"]
 [ext_resource type="PackedScene" uid="uid://cywr47okunqv3" path="res://scenes/DeliveryZone.tscn" id="15_187va"]
 [ext_resource type="PackedScene" uid="uid://bb3e2h0hg2akb" path="res://scenes/ReceiptTicket.tscn" id="16_23817"]
+[ext_resource type="PackedScene" uid="uid://yuw6gx4pr8yd" path="res://scenes/InstructionBook.tscn" id="17_fkdmm"]
 [ext_resource type="Texture2D" uid="uid://c6qcxra77p7lg" path="res://assets/posters.png" id="18_7x280"]
+[ext_resource type="AudioStream" uid="uid://cr48dorn3stfs" path="res://audio/bwaaaa-bwoaaaa.wav" id="19_rne88"]
+[ext_resource type="AudioStream" uid="uid://cui2nru54ta0d" path="res://audio/bite1.wav" id="20_jf33a"]
+[ext_resource type="Script" uid="uid://hjfhlja4by1n" path="res://scripts/loop_audio.gd" id="20_msu7w"]
+[ext_resource type="AudioStream" uid="uid://dytybpr0whqm4" path="res://audio/bite2.wav" id="21_3mfof"]
+[ext_resource type="AudioStream" uid="uid://di41tte2vh8po" path="res://audio/bite3.wav" id="22_tvowg"]
+[ext_resource type="AudioStream" uid="uid://bfi8db6ckpwce" path="res://audio/bite4.wav" id="23_1vlcj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3wacy"]
 atlas = ExtResource("1_dhc3s")
@@ -74,7 +81,7 @@ autoplay = "default"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1453666503]
 position = Vector2(-67, 3)
-zoom = Vector2(4.37, 4.37)
+zoom = Vector2(2.405, 2.405)
 
 [node name="PlayerGrabber" parent="." unique_id=1821917048 instance=ExtResource("2_rbtp0")]
 
@@ -137,6 +144,30 @@ scale = Vector2(0.64, 0.64)
 position = Vector2(-32, -39)
 scale = Vector2(0.64, 0.64)
 
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=399390927]
+position = Vector2(-152, -85)
+rotation = 0.19137335
+scale = Vector2(0.43499997, 0.43499997)
+texture = ExtResource("18_7x280")
+region_enabled = true
+region_rect = Rect2(263.3309, 0, 120.081696, 128)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=560725284]
+position = Vector2(-196.99998, -56.999985)
+rotation = -0.45751405
+scale = Vector2(0.435, 0.435)
+texture = ExtResource("18_7x280")
+region_enabled = true
+region_rect = Rect2(131.44635, 0, 123.67386, 128)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1109039417]
+position = Vector2(-101.000015, -69)
+rotation = 0.4814239
+scale = Vector2(0.43499997, 0.43499997)
+texture = ExtResource("18_7x280")
+region_enabled = true
+region_rect = Rect2(0, 0, 131.47765, 128)
+
 [node name="Control" type="Control" parent="." unique_id=1241724224]
 layout_mode = 3
 anchors_preset = 0
@@ -148,30 +179,21 @@ layout_mode = 1
 receipt_scene = ExtResource("16_23817")
 possible_orders = Array[String](["biscuit-cooked-jazza", "biscuit-cooked-zorp", "biscuit-cooked-snargle", "sand-jazza", "sand-zorp", "sand-snargle", "sand-jazza-cooked", "sand-zorp-cooked", "sand-snargle-cooked", "sand-bacon-jazza", "sand-bacon-zorp", "sand-bacon-snargle", "sand-bacon-jazza-cooked", "sand-bacon-zorp-cooked", "sand-bacon-snargle-cooked"])
 
+[node name="InstructionBook" parent="Control" unique_id=2045019489 instance=ExtResource("17_fkdmm")]
+z_index = 100
+layout_mode = 1
+offset_left = -209.0
+offset_top = -71.0
+offset_right = -209.0
+offset_bottom = -71.0
+
 [node name="DeliveryZone" parent="." unique_id=472155788 instance=ExtResource("15_187va")]
 position = Vector2(-254, -2)
 order_manager_path = NodePath("../Control/OrderManager")
+match_sounds = Array[AudioStream]([ExtResource("20_jf33a"), ExtResource("21_3mfof"), ExtResource("22_tvowg"), ExtResource("23_1vlcj")])
 
-[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=399390927]
-position = Vector2(-152, -85)
-rotation = 0.19137335
-scale = Vector2(0.435, 0.435)
-texture = ExtResource("18_7x280")
-region_enabled = true
-region_rect = Rect2(263.3309, 0, 120.081696, 128)
-
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=560725284]
-position = Vector2(-199.99998, -77)
-rotation = -0.45751405
-scale = Vector2(0.435, 0.435)
-texture = ExtResource("18_7x280")
-region_enabled = true
-region_rect = Rect2(131.44635, 0, 123.67386, 128)
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1109039417]
-position = Vector2(-101.000015, -69)
-rotation = 0.48142388
-scale = Vector2(0.435, 0.435)
-texture = ExtResource("18_7x280")
-region_enabled = true
-region_rect = Rect2(0, 0, 131.47765, 128)
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2233258]
+stream = ExtResource("19_rne88")
+volume_db = -12.06
+autoplay = true
+script = ExtResource("20_msu7w")

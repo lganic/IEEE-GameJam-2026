@@ -24,12 +24,12 @@ var order_text := {
 	"sand-bacon-snargle": "BACON\nSNARGLE JAM\nSANDWICH",
 	"sand-bacon-jazza-cooked": "BACON\nJAZZA JAM\nCOOKED\nSANDWICH",
 	"sand-bacon-zorp-cooked": "BACON\nZORP JAM\nCOOKED\nSANDWICH",
-	"sand-bacon-snargle-cooked": "BACON\nZARGLE JAM\nCOOKED\nSANDWICH",
+	"sand-bacon-snargle-cooked": "BACON\nSNARGLE JAM\nCOOKED\nSANDWICH",
 }
 
 func _ready():
 	var timer = Timer.new()
-	timer.wait_time = 30
+	timer.wait_time = 20
 	timer.autostart = true
 	timer.one_shot = false
 	timer.timeout.connect(spawn_random_order)

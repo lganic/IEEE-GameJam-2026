@@ -1,6 +1,47 @@
 [gd_scene format=3 uid="uid://c4cg32n2py332"]
 
 [ext_resource type="PackedScene" uid="uid://ccs0yjbxuyx7f" path="res://scenes/ship.tscn" id="1_pvqg0"]
+[ext_resource type="Script" uid="uid://dk75kre8pkfw" path="res://scripts/PlayerMover.gd" id="2_t45w4"]
+[ext_resource type="Texture2D" uid="uid://coqawddbg15n3" path="res://assets/playercharacter.png" id="3_h5ip5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40w10"]
+atlas = ExtResource("3_h5ip5")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvvcp"]
+atlas = ExtResource("3_h5ip5")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hh5oj"]
+atlas = ExtResource("3_h5ip5")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqfsp"]
+atlas = ExtResource("3_h5ip5")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i6jx3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40w10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvvcp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hh5oj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqfsp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t45w4"]
+size = Vector2(26, 23)
 
 [node name="Node2D" type="Node2D" unique_id=1855781328]
 
@@ -17,3 +58,16 @@ color = Color(0, 0, 0, 1)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=401445166]
 position = Vector2(57, 10)
 zoom = Vector2(1.68, 1.68)
+position_smoothing_enabled = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=582023257]
+script = ExtResource("2_t45w4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=617185369]
+z_index = 5
+sprite_frames = SubResource("SpriteFrames_i6jx3")
+frame_progress = 0.72233975
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1363766451]
+position = Vector2(1, 20.5)
+shape = SubResource("RectangleShape2D_t45w4")
