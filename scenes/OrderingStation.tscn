@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://bi57xwwuhmmgc"]
 
-[ext_resource type="Script" path="res://scenes/ordering_station.gd" id="1_cwj6n"]
+[ext_resource type="Script" uid="uid://cq3crcu1kyiry" path="res://scenes/ordering_station.gd" id="1_cwj6n"]
 [ext_resource type="Script" uid="uid://dthwq4vy16hwd" path="res://scenes/ignore_mouse_filter.gd" id="2_7vgnf"]
 [ext_resource type="Texture2D" uid="uid://0g8krgkuycg2" path="res://assets/Glorpfile/p1-proc.png" id="2_e4ocq"]
+[ext_resource type="PackedScene" uid="uid://clnsvwnmxsdfc" path="res://scenes/DialogBox.tscn" id="2_lifl1"]
 [ext_resource type="Texture2D" uid="uid://cm37jfepljygs" path="res://assets/Glorpfile/p2-proc.png" id="3_jdig5"]
 [ext_resource type="Texture2D" uid="uid://b4sf14xn6mwoj" path="res://assets/Glorpfile/glorp-removebg-preview_1.png" id="3_r1klw"]
 [ext_resource type="Texture2D" uid="uid://csdchonrw8oh" path="res://assets/Glorpfile/glorp_talking-removebg-preview_1.png" id="4_dh8a3"]
@@ -436,6 +437,7 @@ font_color = Color(0, 0, 0, 1)
 
 [node name="OrderingStationHandler" type="Node2D" unique_id=1017296139]
 script = ExtResource("1_cwj6n")
+speech_bubble_scene = ExtResource("2_lifl1")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=204904939]
 z_index = -1
