@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="FIT IEEE Southeast Con Software Compeition"
-run/main_scene="uid://c4cg32n2py332"
+run/main_scene="uid://bk75s1dq66fur"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -21,8 +21,9 @@ ItemDatabase="*uid://bqh4ie42tnd14"
 
 [display]
 
-window/size/viewport_width=1440
-window/size/viewport_height=1080
+window/size/viewport_width=800
+window/size/viewport_height=600
+window/stretch/mode="viewport"
 
 [global_group]
 
