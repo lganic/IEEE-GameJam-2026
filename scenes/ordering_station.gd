@@ -38,10 +38,22 @@ func spawn_customer(name: String) -> void:
 	
 	customer_animation.animation_finished.connect(_spawn_order_bubble)
 
+func _add_random_customer(meh: StringName) -> void:
+	
+	customer_animation.animation_finished.disconnect(_add_random_customer)
+	
+	var items = ["Glorp", "GortandSon", "Karen"]
+
+	var random_item = items[randi() % items.size()]
+	
+	spawn_customer(random_item)
+
+
 #Call this when you want customer to walk away
 func remove_customer() -> void:
 	#customer_sprite.visible = false
 	customer_animation.play("Customer Leave")
+	customer_animation.animation_finished.connect(_add_random_customer)
 
 	if current_bubble and is_instance_valid(current_bubble):
 		current_bubble.queue_free()

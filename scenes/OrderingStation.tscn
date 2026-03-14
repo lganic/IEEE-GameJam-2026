@@ -465,7 +465,7 @@ visible = false
 z_index = -2
 position = Vector2(887, 264)
 sprite_frames = SubResource("SpriteFrames_s6rdn")
-animation = &"John"
+animation = &"GortandSon"
 
 [node name="Audio" type="Node" parent="." unique_id=1709762250]
 
