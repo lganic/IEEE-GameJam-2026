@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://cwptg21fg11el" path="res://assets/Glorpfile/karen_talking-removebg-preview.png" id="14_s0wv0"]
 [ext_resource type="FontFile" uid="uid://gjr6ohpujnpf" path="res://fonts/retro-font.ttf" id="23_hreya"]
 [ext_resource type="Script" path="res://scenes/MoneyDisplay.gd" id="24_h6yss"]
+[ext_resource type="Texture2D" uid="uid://crssjvaho3qx" path="res://assets/Arial.jpg" id="25_h6yss"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s6rdn"]
 animations = [{
@@ -473,6 +474,7 @@ stream = ExtResource("10_st6xb")
 
 [node name="Intro Cinematic" type="Node2D" parent="." unique_id=1264984758]
 visible = false
+z_index = 8
 metadata/_edit_lock_ = true
 
 [node name="Intro Cinematic Anim" type="AnimationPlayer" parent="Intro Cinematic" unique_id=534632728]
@@ -518,5 +520,11 @@ script = ExtResource("24_h6yss")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=905765963]
 position = Vector2(731, 550)
 zoom = Vector2(0.55, 0.55)
+
+[node name="Arial" type="Sprite2D" parent="." unique_id=1736862462]
+z_index = -1
+position = Vector2(265.00003, 250)
+scale = Vector2(0.225, 0.225)
+texture = ExtResource("25_h6yss")
 
 [connection signal="animation_finished" from="Intro Cinematic/Intro Cinematic Anim" to="." method="_on_intro_cinematic_anim_animation_finished"]
