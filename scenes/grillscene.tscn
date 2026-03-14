@@ -18,6 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://cywr47okunqv3" path="res://scenes/DeliveryZone.tscn" id="15_187va"]
 [ext_resource type="PackedScene" uid="uid://bb3e2h0hg2akb" path="res://scenes/ReceiptTicket.tscn" id="16_23817"]
 [ext_resource type="Texture2D" uid="uid://c6qcxra77p7lg" path="res://assets/posters.png" id="18_7x280"]
+[ext_resource type="AudioStream" uid="uid://cr48dorn3stfs" path="res://audio/bwaaaa-bwoaaaa.wav" id="19_rne88"]
+[ext_resource type="Script" uid="uid://hjfhlja4by1n" path="res://scripts/loop_audio.gd" id="20_msu7w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3wacy"]
 atlas = ExtResource("1_dhc3s")
@@ -175,3 +177,9 @@ scale = Vector2(0.435, 0.435)
 texture = ExtResource("18_7x280")
 region_enabled = true
 region_rect = Rect2(0, 0, 131.47765, 128)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2233258]
+stream = ExtResource("19_rne88")
+volume_db = -12.06
+autoplay = true
+script = ExtResource("20_msu7w")
