@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://jl3nc1041rsw" path="res://scenes/OrderManager.tscn" id="15_0cl04"]
 [ext_resource type="PackedScene" uid="uid://cywr47okunqv3" path="res://scenes/DeliveryZone.tscn" id="15_187va"]
 [ext_resource type="PackedScene" uid="uid://bb3e2h0hg2akb" path="res://scenes/ReceiptTicket.tscn" id="16_23817"]
+[ext_resource type="Texture2D" uid="uid://c6qcxra77p7lg" path="res://assets/posters.png" id="18_7x280"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3wacy"]
 atlas = ExtResource("1_dhc3s")
@@ -139,10 +140,8 @@ scale = Vector2(0.64, 0.64)
 [node name="Control" type="Control" parent="." unique_id=1241724224]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 204.0
-offset_top = -83.0
-offset_right = 244.0
-offset_bottom = -43.0
+offset_right = 1.0
+offset_bottom = 1.0
 
 [node name="OrderManager" parent="Control" unique_id=1399016746 instance=ExtResource("15_0cl04")]
 layout_mode = 1
@@ -152,3 +151,27 @@ possible_orders = Array[String](["biscuit-cooked-jazza", "biscuit-cooked-zorp", 
 [node name="DeliveryZone" parent="." unique_id=472155788 instance=ExtResource("15_187va")]
 position = Vector2(-254, -2)
 order_manager_path = NodePath("../Control/OrderManager")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=399390927]
+position = Vector2(-152, -85)
+rotation = 0.19137335
+scale = Vector2(0.435, 0.435)
+texture = ExtResource("18_7x280")
+region_enabled = true
+region_rect = Rect2(263.3309, 0, 120.081696, 128)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=560725284]
+position = Vector2(-199.99998, -77)
+rotation = -0.45751405
+scale = Vector2(0.435, 0.435)
+texture = ExtResource("18_7x280")
+region_enabled = true
+region_rect = Rect2(131.44635, 0, 123.67386, 128)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1109039417]
+position = Vector2(-101.000015, -69)
+rotation = 0.48142388
+scale = Vector2(0.435, 0.435)
+texture = ExtResource("18_7x280")
+region_enabled = true
+region_rect = Rect2(0, 0, 131.47765, 128)
