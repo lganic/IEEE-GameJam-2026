@@ -5,7 +5,7 @@ extends Area2D
 @onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var label: Label = $Label
 
-var using_quant = true
+var using_quant = false
 
 func _input_event(viewport, event, shape_idx):
 	

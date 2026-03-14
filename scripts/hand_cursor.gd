@@ -12,8 +12,12 @@ func _process(_delta: float) -> void:
 	var screen_mouse_pos = get_viewport().get_mouse_position()
 	var world_mouse_pos = get_viewport().get_camera_2d().get_global_mouse_position()
 
+	var target_position = screen_mouse_pos + local_offset
+
+	target_position = target_position.clamp(Vector2(-3000, 3000), Vector2(-300, 300)) # Hacky way of ensuring that the hand doesnt leak into the main scene.
+
 	# Hand sprite stays in screen/UI space
-	hand_sprite.global_position = screen_mouse_pos + local_offset
+	hand_sprite.global_position = target_position
 
 	# Probe goes into world space for physics overlap
 	zone_probe.global_position = world_mouse_pos

@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://c4cg32n2py332"]
 
 [ext_resource type="PackedScene" uid="uid://ccs0yjbxuyx7f" path="res://scenes/ship.tscn" id="1_pvqg0"]
+[ext_resource type="Script" uid="uid://dthwq4vy16hwd" path="res://scenes/ignore_mouse_filter.gd" id="1_vqfsp"]
 [ext_resource type="Script" uid="uid://dk75kre8pkfw" path="res://scripts/PlayerMover.gd" id="2_t45w4"]
 [ext_resource type="Texture2D" uid="uid://coqawddbg15n3" path="res://assets/playercharacter.png" id="3_h5ip5"]
+[ext_resource type="PackedScene" uid="uid://bk75s1dq66fur" path="res://scenes/grillscene.tscn" id="4_40w10"]
+[ext_resource type="PackedScene" uid="uid://bi57xwwuhmmgc" path="res://scenes/OrderingStation.tscn" id="5_xvvcp"]
+[ext_resource type="Script" uid="uid://cd435dyj577dx" path="res://scripts/game_manager.gd" id="6_xvvcp"]
+[ext_resource type="Script" uid="uid://bdvjt1bpd0cg3" path="res://scenes/cooking_area_manager.gd" id="7_hh5oj"]
+[ext_resource type="Script" uid="uid://ceopr3ran84x0" path="res://scripts/order_area_manager.gd" id="9_i6jx3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_40w10"]
 atlas = ExtResource("3_h5ip5")
@@ -43,31 +49,73 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t45w4"]
 size = Vector2(26, 23)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh5oj"]
+size = Vector2(160, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jn13j"]
+size = Vector2(139, 48)
+
 [node name="Node2D" type="Node2D" unique_id=1855781328]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1891781329]
-offset_left = -690.0
-offset_top = -407.0
-offset_right = -650.0
-offset_bottom = -367.0
-scale = Vector2(37.44, 22.8)
+z_index = -13
+offset_left = -1094.0
+offset_top = -1187.0
+offset_right = -1054.0
+offset_bottom = -1147.0
+scale = Vector2(125.205, 76.247)
 color = Color(0, 0, 0, 1)
+script = ExtResource("1_vqfsp")
 
 [node name="Node2D" parent="." unique_id=1361151523 instance=ExtResource("1_pvqg0")]
+position = Vector2(8, -673)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=401445166]
-position = Vector2(57, 10)
-zoom = Vector2(1.68, 1.68)
-position_smoothing_enabled = true
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=582023257]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=582023257 groups=["player"]]
+position = Vector2(8, -673)
 script = ExtResource("2_t45w4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=617185369]
 z_index = 5
 sprite_frames = SubResource("SpriteFrames_i6jx3")
+autoplay = "default"
 frame_progress = 0.72233975
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1363766451]
 position = Vector2(1, 20.5)
 shape = SubResource("RectangleShape2D_t45w4")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=401445166]
+zoom = Vector2(1.68, 1.68)
+position_smoothing_enabled = true
+
+[node name="Node2D2" parent="." unique_id=1421340171 instance=ExtResource("4_40w10")]
+
+[node name="OrderingStationHandler" parent="." unique_id=1017296139 instance=ExtResource("5_xvvcp")]
+position = Vector2(594, -654)
+
+[node name="GameManager" type="Node2D" parent="." unique_id=1733052560]
+script = ExtResource("6_xvvcp")
+world_camera_path = NodePath("../CharacterBody2D/Camera2D")
+cooking_camera_path = NodePath("../Node2D2/Camera2D")
+ordering_camera_path = NodePath("../OrderingStationHandler/Camera2D")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1023442077]
+position = Vector2(81, -813)
+script = ExtResource("7_hh5oj")
+game_manager_path = NodePath("../GameManager")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1770269753]
+position = Vector2(24, 37)
+shape = SubResource("RectangleShape2D_hh5oj")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1408704214]
+position = Vector2(-55, -790)
+script = ExtResource("9_i6jx3")
+game_manager_path = NodePath("../GameManager")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1010737411]
+position = Vector2(-1.5, 14)
+shape = SubResource("RectangleShape2D_jn13j")
+
+[editable path="Node2D2"]
+[editable path="OrderingStationHandler"]
