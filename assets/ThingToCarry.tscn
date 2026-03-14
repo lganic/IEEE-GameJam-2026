@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://d3bqvsfogrrqi"]
+
+[ext_resource type="Script" uid="uid://cg0tfo4ck4kdk" path="res://assets/thing_to_carry.gd" id="1_kr0r3"]
+
+[node name="ThingToCarry" type="Node2D" unique_id=38299504]
+script = ExtResource("1_kr0r3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1851136651]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dr3mvfs5m23ap"]
+
+[ext_resource type="Script" uid="uid://iaonmnt7ove8" path="res://scenes/trigger_haul_area.gd" id="1_jshn3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ppdv0"]
+size = Vector2(38, 40)
+
+[node name="TriggerHaulArea" type="Area2D" unique_id=2009461096]
+script = ExtResource("1_jshn3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=701207639]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_ppdv0")

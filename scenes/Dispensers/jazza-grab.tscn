@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bfo5b848mred8"]
+
+[ext_resource type="PackedScene" uid="uid://c7bj7p2cvcjgu" path="res://assets/Resource.tscn" id="1_kvb3w"]
+[ext_resource type="Texture2D" uid="uid://dukkgu73jm3jh" path="res://assets/blue.png" id="2_60wtn"]
+
+[node name="Resource" unique_id=1164490833 instance=ExtResource("1_kvb3w")]
+resource_type = "jazza"
+
+[node name="Sprite2D" parent="." index="0" unique_id=2009235067]
+scale = Vector2(2.1599998, 2.4400012)
+texture = ExtResource("2_60wtn")

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c8xkc3e2dnsp7"]
+
+[ext_resource type="PackedScene" uid="uid://c7bj7p2cvcjgu" path="res://assets/Resource.tscn" id="1_gy167"]
+[ext_resource type="Texture2D" uid="uid://bkp6n0sur4x3u" path="res://assets/bacon.png" id="2_x5t1r"]
+
+[node name="Resource" unique_id=1164490833 instance=ExtResource("1_gy167")]
+resource_type = "bacon"
+
+[node name="Sprite2D" parent="." index="0" unique_id=2009235067]
+scale = Vector2(2.1880693, 2.188311)
+texture = ExtResource("2_x5t1r")

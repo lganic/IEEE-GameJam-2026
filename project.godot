@@ -33,6 +33,12 @@ window/stretch/mode="viewport"
 
 items=""
 player=""
+bacon-dispenser=""
+biscuit-dispenser=""
+bun-dispenser=""
+jazza-dispenser=""
+snargle-dispenser=""
+zorp-dispenser=""
 
 [input]
 

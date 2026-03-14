@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cgdcv0gn4yihv"]
+
+[ext_resource type="PackedScene" uid="uid://c7bj7p2cvcjgu" path="res://assets/Resource.tscn" id="1_1wa2a"]
+[ext_resource type="Texture2D" uid="uid://cy8amnu74nw6j" path="res://assets/green.png" id="2_rvnlw"]
+
+[node name="Resource" unique_id=1164490833 instance=ExtResource("1_1wa2a")]
+resource_type = "zorp"
+
+[node name="Sprite2D" parent="." index="0" unique_id=2009235067]
+scale = Vector2(2.532259, 2.190472)
+texture = ExtResource("2_rvnlw")

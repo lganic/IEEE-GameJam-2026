@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://scyu1y0k73d"]
+
+[ext_resource type="PackedScene" uid="uid://c7bj7p2cvcjgu" path="res://assets/Resource.tscn" id="1_yleq2"]
+[ext_resource type="Texture2D" uid="uid://c5dgaguhd5e4o" path="res://assets/buns.png" id="2_wp81b"]
+
+[node name="Resource" unique_id=1164490833 instance=ExtResource("1_yleq2")]
+resource_type = "bread"
+
+[node name="Sprite2D" parent="." index="0" unique_id=2009235067]
+scale = Vector2(2.0400014, 2.1599998)
+texture = ExtResource("2_wp81b")

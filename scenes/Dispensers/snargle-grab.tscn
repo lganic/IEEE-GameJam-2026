@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cqplx3072auhg"]
+
+[ext_resource type="PackedScene" uid="uid://c7bj7p2cvcjgu" path="res://assets/Resource.tscn" id="1_8xsov"]
+[ext_resource type="Texture2D" uid="uid://g34ujhj8r7pn" path="res://assets/red.png" id="2_ibcl3"]
+
+[node name="Resource" unique_id=1164490833 instance=ExtResource("1_8xsov")]
+resource_type = "snargle"
+
+[node name="Sprite2D" parent="." index="0" unique_id=2009235067]
+scale = Vector2(2.4399996, 2.2400007)
+texture = ExtResource("2_ibcl3")

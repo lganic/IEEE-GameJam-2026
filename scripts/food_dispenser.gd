@@ -1,11 +1,11 @@
 extends Area2D
 
-@export var quant: int = 10
+@export var quant: int = 5
 @export var scene_to_spawn: PackedScene
 @onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var label: Label = $Label
 
-var using_quant = false
+var using_quant = true
 
 func _input_event(viewport, event, shape_idx):
 	
