@@ -57,7 +57,7 @@ func _add_random_customer(meh: StringName) -> void:
 	
 	customer_animation.animation_finished.disconnect(_add_random_customer)
 	
-	var items = ["Glorp", "GortandSon", "Karen"]
+	var items = ["Glorp", "GortandSon", "Karen", "Cool", "Goonga", "Glibelle"]
 	var random_item = current_displayed_customer
 
 	while random_item == current_displayed_customer:

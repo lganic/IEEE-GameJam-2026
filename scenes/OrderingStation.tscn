@@ -11,19 +11,31 @@
 [ext_resource type="Texture2D" uid="uid://dld46rtikd21g" path="res://assets/Glorpfile/p4-proc.png" id="5_6prrn"]
 [ext_resource type="Texture2D" uid="uid://cn3tmawndqwep" path="res://assets/Glorpfile/FOOD_TRUCK_WINDOW.png" id="5_e4ocq"]
 [ext_resource type="Texture2D" uid="uid://ej7ad3jogq7g" path="res://assets/Glorpfile/glorp_happy-removebg-preview_1.png" id="5_lsd48"]
+[ext_resource type="Texture2D" uid="uid://d0iae8lpnsa2y" path="res://assets/Glorpfile/cool-1.png" id="6_8o2u3"]
 [ext_resource type="Texture2D" uid="uid://dmi2ld8lhxxwq" path="res://assets/Glorpfile/most-colorful-view-universe-nasa-space-hubble-telescope.webp" id="6_jdig5"]
 [ext_resource type="Texture2D" uid="uid://bumj7i3c4r7" path="res://assets/Glorpfile/glorp_angry-removebg-preview.png" id="6_u6sgt"]
+[ext_resource type="Texture2D" uid="uid://juvms0dopbci" path="res://assets/Glorpfile/cool-2.png" id="7_7saog"]
 [ext_resource type="Script" uid="uid://duv1el6ywppv0" path="res://scenes/animation_player.gd" id="7_s6rdn"]
 [ext_resource type="Texture2D" uid="uid://hxhfroja2p8" path="res://assets/Glorpfile/splash-rem.png" id="7_st6xb"]
+[ext_resource type="Texture2D" uid="uid://e3cwpkerfpep" path="res://assets/Glorpfile/cool-3.png" id="8_58wwf"]
 [ext_resource type="AudioStream" uid="uid://deknacoisagk7" path="res://audio/newvrec.wav" id="8_q2e6n"]
 [ext_resource type="Texture2D" uid="uid://gqhbgs27uk5w" path="res://assets/Glorpfile/gort_and_son-removebg-preview.png" id="8_x4ipw"]
+[ext_resource type="Texture2D" uid="uid://4g250t7thnbd" path="res://assets/Glorpfile/cool-4.png" id="9_6n4et"]
 [ext_resource type="Texture2D" uid="uid://b3mss3vu3tg5m" path="res://assets/Glorpfile/gort_and_son_talking-removebg-preview_1.png" id="9_hreya"]
+[ext_resource type="Texture2D" uid="uid://iwg7a4665yn1" path="res://assets/Glorpfile/glebelle-1.png" id="10_cu0nn"]
 [ext_resource type="Texture2D" uid="uid://xyw40b5k5ia" path="res://assets/Glorpfile/gort_and_son_happy-removebg-preview_1.png" id="10_h6yss"]
 [ext_resource type="AudioStream" uid="uid://cr48dorn3stfs" path="res://audio/bwaaaa-bwoaaaa.wav" id="10_st6xb"]
 [ext_resource type="Texture2D" uid="uid://b2fjy2c1xckbj" path="res://assets/Glorpfile/gort_and_son_angry-removebg-preview.png" id="11_7vgnf"]
+[ext_resource type="Texture2D" uid="uid://txnqc0y1lwoc" path="res://assets/Glorpfile/glebelle-2.png" id="11_jgt23"]
+[ext_resource type="Texture2D" uid="uid://o40enrug2h46" path="res://assets/Glorpfile/glebelle-3.png" id="12_62lkx"]
 [ext_resource type="Texture2D" uid="uid://cpmnptqdj0cdv" path="res://assets/Glorpfile/karen_angry-removebg-preview.png" id="12_lifl1"]
+[ext_resource type="Texture2D" uid="uid://b2sgpof6igam4" path="res://assets/Glorpfile/glebelle-4.png" id="13_t8gkw"]
 [ext_resource type="Texture2D" uid="uid://bkustvcwvgnx" path="res://assets/Glorpfile/karen-removebg-preview.png" id="13_xqjsk"]
 [ext_resource type="Texture2D" uid="uid://cwptg21fg11el" path="res://assets/Glorpfile/karen_talking-removebg-preview.png" id="14_s0wv0"]
+[ext_resource type="Texture2D" uid="uid://cd8kvavdiy07r" path="res://assets/Glorpfile/goonga-1.png" id="18_a08vq"]
+[ext_resource type="Texture2D" uid="uid://cwr8brf5rbnj2" path="res://assets/Glorpfile/goonga-2.png" id="19_wumwx"]
+[ext_resource type="Texture2D" uid="uid://bivc7whkhby82" path="res://assets/Glorpfile/goonga-3.png" id="20_rvou3"]
+[ext_resource type="Texture2D" uid="uid://b2jpwnsukfahs" path="res://assets/Glorpfile/goonga-4.png" id="21_pvijl"]
 [ext_resource type="FontFile" uid="uid://gjr6ohpujnpf" path="res://fonts/retro-font.ttf" id="23_hreya"]
 [ext_resource type="Script" uid="uid://ddlqa11avldc7" path="res://scenes/MoneyDisplay.gd" id="24_h6yss"]
 [ext_resource type="Texture2D" uid="uid://crssjvaho3qx" path="res://assets/Arial.jpg" id="25_h6yss"]
@@ -32,6 +44,40 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s6rdn"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_8o2u3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7saog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_58wwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6n4et")
+}],
+"loop": true,
+"name": &"Cool",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_cu0nn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jgt23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_62lkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_t8gkw")
+}],
+"loop": true,
+"name": &"Glibelle",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_r1klw")
@@ -47,6 +93,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"Glorp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_a08vq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wumwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_rvou3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_pvijl")
+}],
+"loop": true,
+"name": &"Goonga",
 "speed": 5.0
 }, {
 "frames": [{
@@ -467,7 +530,7 @@ visible = false
 z_index = -2
 position = Vector2(887, 264)
 sprite_frames = SubResource("SpriteFrames_s6rdn")
-animation = &"GortandSon"
+animation = &"Glorp"
 
 [node name="Audio" type="Node" parent="." unique_id=1709762250]
 
