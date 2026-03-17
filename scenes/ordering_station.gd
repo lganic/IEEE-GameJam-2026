@@ -16,6 +16,8 @@ var current_customer: int = 0
 var current_order_key: String = ""
 var current_bubble: Node = null
 
+var current_displayed_customer = ""
+
 var rng := RandomNumberGenerator.new()
 
 func _ready() -> void:
@@ -47,6 +49,8 @@ func spawn_customer(name: String) -> void:
 	customer_sprite.animation = name
 	customer_animation.play("Customer Enter")
 	
+	current_displayed_customer = name
+	
 	customer_animation.animation_finished.connect(_spawn_order_bubble)
 
 func _add_random_customer(meh: StringName) -> void:
@@ -54,8 +58,10 @@ func _add_random_customer(meh: StringName) -> void:
 	customer_animation.animation_finished.disconnect(_add_random_customer)
 	
 	var items = ["Glorp", "GortandSon", "Karen"]
+	var random_item = current_displayed_customer
 
-	var random_item = items[randi() % items.size()]
+	while random_item == current_displayed_customer:
+		random_item = items[randi() % items.size()]
 	
 	spawn_customer(random_item)
 
