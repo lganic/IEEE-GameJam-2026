@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c4cg32n2py332"]
 
 [ext_resource type="PackedScene" uid="uid://ccs0yjbxuyx7f" path="res://scenes/ship.tscn" id="1_pvqg0"]
-[ext_resource type="Script" uid="uid://dthwq4vy16hwd" path="res://scenes/ignore_mouse_filter.gd" id="1_vqfsp"]
 [ext_resource type="Script" uid="uid://dk75kre8pkfw" path="res://scripts/PlayerMover.gd" id="2_t45w4"]
 [ext_resource type="Texture2D" uid="uid://coqawddbg15n3" path="res://assets/playercharacter.png" id="3_h5ip5"]
 [ext_resource type="PackedScene" uid="uid://bk75s1dq66fur" path="res://scenes/grillscene.tscn" id="4_40w10"]
@@ -23,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://bfo5b848mred8" path="res://scenes/Dispensers/jazza-grab.tscn" id="14_33mrd"]
 [ext_resource type="PackedScene" uid="uid://cgdcv0gn4yihv" path="res://scenes/Dispensers/zorp-grab.tscn" id="14_b085t"]
 [ext_resource type="PackedScene" uid="uid://cs5d6yn40gn4d" path="res://scenes/PauseMenu.tscn" id="23_aomoi"]
+[ext_resource type="Texture2D" uid="uid://ctyal4hw70cnw" path="res://assets/space.png" id="23_ktrk3"]
+[ext_resource type="Script" uid="uid://b7re0c1qoskao" path="res://scenes/rotate.gd" id="24_ktrk3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_40w10"]
 atlas = ExtResource("3_h5ip5")
@@ -78,16 +79,6 @@ font_color = Color(0, 0, 0, 1)
 size = Vector2(158, 136)
 
 [node name="Node2D" type="Node2D" unique_id=1855781328]
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1891781329]
-z_index = -13
-offset_left = -1094.0
-offset_top = -1187.0
-offset_right = -1054.0
-offset_bottom = -1147.0
-scale = Vector2(125.205, 76.247)
-color = Color(0, 0, 0, 1)
-script = ExtResource("1_vqfsp")
 
 [node name="Node2D" parent="." unique_id=1361151523 instance=ExtResource("1_pvqg0")]
 position = Vector2(8, -673)
@@ -265,6 +256,12 @@ shape = SubResource("RectangleShape2D_33mrd")
 debug_color = Color(0.5572427, 0.45025414, 0.8692072, 0.41960785)
 
 [node name="PauseMenu" parent="." unique_id=1202541812 instance=ExtResource("23_aomoi")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1388839384]
+z_index = -50
+position = Vector2(94, 3428)
+texture = ExtResource("23_ktrk3")
+script = ExtResource("24_ktrk3")
 
 [editable path="Node2D2"]
 [editable path="OrderingStationHandler"]
