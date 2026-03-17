@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://cqplx3072auhg" path="res://scenes/Dispensers/snargle-grab.tscn" id="13_uo6h6"]
 [ext_resource type="PackedScene" uid="uid://bfo5b848mred8" path="res://scenes/Dispensers/jazza-grab.tscn" id="14_33mrd"]
 [ext_resource type="PackedScene" uid="uid://cgdcv0gn4yihv" path="res://scenes/Dispensers/zorp-grab.tscn" id="14_b085t"]
+[ext_resource type="PackedScene" uid="uid://cs5d6yn40gn4d" path="res://scenes/PauseMenu.tscn" id="23_aomoi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_40w10"]
 atlas = ExtResource("3_h5ip5")
@@ -262,6 +263,8 @@ position = Vector2(111, -825)
 position = Vector2(-5, -43)
 shape = SubResource("RectangleShape2D_33mrd")
 debug_color = Color(0.5572427, 0.45025414, 0.8692072, 0.41960785)
+
+[node name="PauseMenu" parent="." unique_id=1202541812 instance=ExtResource("23_aomoi")]
 
 [editable path="Node2D2"]
 [editable path="OrderingStationHandler"]
