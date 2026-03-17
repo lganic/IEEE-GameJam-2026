@@ -73,6 +73,9 @@ font = ExtResource("12_1xxg6")
 font_size = 32
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33mrd"]
+size = Vector2(158, 136)
+
 [node name="Node2D" type="Node2D" unique_id=1855781328]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1891781329]
@@ -140,32 +143,32 @@ texture = ExtResource("8_ycryd")
 [node name="TriggerHaulArea" parent="Node2D2/Dispensers" parent_id_path=PackedInt32Array(1421340171, 1217348228) index="11" unique_id=2009461096 instance=ExtResource("9_ystrd")]
 position = Vector2(281, -561)
 spawned_scene = ExtResource("10_uo6h6")
-target_area_path = NodePath("../../../KITCHEN")
+target_area_path = NodePath("../../../Resource Target")
 
 [node name="TriggerHaulArea2" parent="Node2D2/Dispensers" parent_id_path=PackedInt32Array(1421340171, 1217348228) index="12" unique_id=2078770682 instance=ExtResource("9_ystrd")]
 position = Vector2(282, -659)
 spawned_scene = ExtResource("10_isyof")
-target_area_path = NodePath("../../../KITCHEN")
+target_area_path = NodePath("../../../Resource Target")
 
 [node name="TriggerHaulArea3" parent="Node2D2/Dispensers" parent_id_path=PackedInt32Array(1421340171, 1217348228) index="13" unique_id=2134658304 instance=ExtResource("9_ystrd")]
 position = Vector2(282, -746)
 spawned_scene = ExtResource("11_uo6h6")
-target_area_path = NodePath("../../../KITCHEN")
+target_area_path = NodePath("../../../Resource Target")
 
 [node name="TriggerHaulArea4" parent="Node2D2/Dispensers" parent_id_path=PackedInt32Array(1421340171, 1217348228) index="14" unique_id=1467254502 instance=ExtResource("9_ystrd")]
 position = Vector2(-134, -531)
 spawned_scene = ExtResource("13_uo6h6")
-target_area_path = NodePath("../../../KITCHEN")
+target_area_path = NodePath("../../../Resource Target")
 
 [node name="TriggerHaulArea5" parent="Node2D2/Dispensers" parent_id_path=PackedInt32Array(1421340171, 1217348228) index="15" unique_id=909537614 instance=ExtResource("9_ystrd")]
 position = Vector2(-40, -531)
 spawned_scene = ExtResource("14_33mrd")
-target_area_path = NodePath("../../../KITCHEN")
+target_area_path = NodePath("../../../Resource Target")
 
 [node name="TriggerHaulArea6" parent="Node2D2/Dispensers" parent_id_path=PackedInt32Array(1421340171, 1217348228) index="16" unique_id=1803880191 instance=ExtResource("9_ystrd")]
 position = Vector2(55, -531)
 spawned_scene = ExtResource("14_b085t")
-target_area_path = NodePath("../../../KITCHEN")
+target_area_path = NodePath("../../../Resource Target")
 
 [node name="OrderManager" parent="Node2D2/Control" parent_id_path=PackedInt32Array(1421340171, 1241724224) index="0" unique_id=1399016746]
 cash_register_path = NodePath("../../../OrderingStationHandler/Label")
@@ -251,6 +254,14 @@ text = "To Replenish Ingredients Walk to the Ingredient, and Bring it Back to Th
 label_settings = SubResource("LabelSettings_517kj")
 autowrap_mode = 2
 text_overrun_behavior = 2
+
+[node name="Resource Target" type="Area2D" parent="." unique_id=734503019]
+position = Vector2(111, -825)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Resource Target" unique_id=1227054311]
+position = Vector2(-5, -43)
+shape = SubResource("RectangleShape2D_33mrd")
+debug_color = Color(0.5572427, 0.45025414, 0.8692072, 0.41960785)
 
 [editable path="Node2D2"]
 [editable path="OrderingStationHandler"]
