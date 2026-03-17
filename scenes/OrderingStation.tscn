@@ -49,10 +49,10 @@ animations = [{
 "texture": ExtResource("6_8o2u3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_7saog")
+"texture": ExtResource("8_58wwf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_58wwf")
+"texture": ExtResource("7_7saog")
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_6n4et")
@@ -66,10 +66,10 @@ animations = [{
 "texture": ExtResource("10_cu0nn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_jgt23")
+"texture": ExtResource("12_62lkx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_62lkx")
+"texture": ExtResource("11_jgt23")
 }, {
 "duration": 1.0,
 "texture": ExtResource("13_t8gkw")
@@ -100,13 +100,13 @@ animations = [{
 "texture": ExtResource("18_a08vq")
 }, {
 "duration": 1.0,
+"texture": ExtResource("21_pvijl")
+}, {
+"duration": 1.0,
 "texture": ExtResource("19_wumwx")
 }, {
 "duration": 1.0,
 "texture": ExtResource("20_rvou3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_pvijl")
 }],
 "loop": true,
 "name": &"Goonga",
@@ -151,10 +151,10 @@ animations = [{
 "texture": ExtResource("12_lifl1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_xqjsk")
+"texture": ExtResource("14_s0wv0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_s0wv0")
+"texture": ExtResource("13_xqjsk")
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_lifl1")
@@ -530,7 +530,7 @@ visible = false
 z_index = -2
 position = Vector2(887, 264)
 sprite_frames = SubResource("SpriteFrames_s6rdn")
-animation = &"Glorp"
+animation = &"Karen"
 
 [node name="Audio" type="Node" parent="." unique_id=1709762250]
 

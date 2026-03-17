@@ -49,6 +49,8 @@ func spawn_customer(name: String) -> void:
 	customer_sprite.animation = name
 	customer_animation.play("Customer Enter")
 	
+	customer_sprite.frame = 0
+	
 	current_displayed_customer = name
 	
 	customer_animation.animation_finished.connect(_spawn_order_bubble)
@@ -80,6 +82,8 @@ func _spawn_order_bubble(meh: StringName) -> void:
 	
 	meep_player.pitch_scale = rng.randf_range(.75, 1.25)
 	meep_player.play()
+	
+	customer_sprite.frame = 1 # Set to talking.
 	
 	customer_animation.animation_finished.disconnect(_spawn_order_bubble) # Just to be safe
 	
@@ -122,6 +126,9 @@ func _spawn_order_bubble(meh: StringName) -> void:
 		current_bubble.bubble_clicked.connect(_on_bubble_clicked)
 
 func _on_bubble_clicked() -> void:
+	
+	customer_sprite.frame = 0
+	
 	if current_bubble and is_instance_valid(current_bubble):
 		current_bubble.queue_free()
 		current_bubble = null
