@@ -7,5 +7,6 @@
 resource_type = "biscuit"
 
 [node name="Sprite2D" parent="." index="0" unique_id=2009235067]
-scale = Vector2(1.9599993, 2.1599998)
+position = Vector2(9.536743e-07, 1.0000005)
+scale = Vector2(0.75, 1.1875)
 texture = ExtResource("2_dbdv5")

@@ -129,15 +129,15 @@ scale = Vector2(1.5999975, 2.119995)
 texture = ExtResource("6_ot4hf")
 
 [node name="Biscuit" type="Sprite2D" parent="Node2D2/Dispensers" parent_id_path=PackedInt32Array(1421340171, 1217348228) index="9" unique_id=1835283504]
-position = Vector2(281, -660)
-rotation = -1.5991411
-scale = Vector2(-2.2441664, -0.9602219)
+position = Vector2(279, -658)
+rotation = -2.3042064
+scale = Vector2(-1.2876556, -1.7690697)
 texture = ExtResource("7_vciil")
 
 [node name="Buns" type="Sprite2D" parent="Node2D2/Dispensers" parent_id_path=PackedInt32Array(1421340171, 1217348228) index="10" unique_id=1483616320]
-position = Vector2(280, -562)
+position = Vector2(279.46744, -559.85895)
 rotation = 1.3076606
-scale = Vector2(1.8613349, 0.72830105)
+scale = Vector2(1.1402118, 1.015635)
 texture = ExtResource("8_ycryd")
 
 [node name="TriggerHaulArea" parent="Node2D2/Dispensers" parent_id_path=PackedInt32Array(1421340171, 1217348228) index="11" unique_id=2009461096 instance=ExtResource("9_ystrd")]

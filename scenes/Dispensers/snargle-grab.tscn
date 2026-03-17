@@ -7,5 +7,6 @@
 resource_type = "snargle"
 
 [node name="Sprite2D" parent="." index="0" unique_id=2009235067]
-scale = Vector2(2.4399996, 2.2400007)
+position = Vector2(-1.0000005, 0.5)
+scale = Vector2(1.25, 1.3125)
 texture = ExtResource("2_ibcl3")

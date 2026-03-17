@@ -7,5 +7,6 @@
 resource_type = "bacon"
 
 [node name="Sprite2D" parent="." index="0" unique_id=2009235067]
-scale = Vector2(2.1880693, 2.188311)
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(1.3750001, 1.375)
 texture = ExtResource("2_x5t1r")

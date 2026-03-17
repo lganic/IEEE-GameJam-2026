@@ -2,7 +2,7 @@ extends Area2D
 
 @export var spawned_scene: PackedScene
 @export var target_area_path: NodePath
-@export var follow_offset: Vector2 = Vector2(0, -40)
+@export var follow_offset: Vector2 = Vector2(0, -20)
 @export var spawn_cooldown: float = 0.2
 
 var can_spawn := true

@@ -7,5 +7,6 @@
 resource_type = "jazza"
 
 [node name="Sprite2D" parent="." index="0" unique_id=2009235067]
-scale = Vector2(2.1599998, 2.4400012)
+position = Vector2(-1.5000014, -2.3841858e-07)
+scale = Vector2(1.5624999, 1.4999999)
 texture = ExtResource("2_60wtn")

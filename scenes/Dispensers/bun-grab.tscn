@@ -7,5 +7,6 @@
 resource_type = "bread"
 
 [node name="Sprite2D" parent="." index="0" unique_id=2009235067]
-scale = Vector2(2.0400014, 2.1599998)
+position = Vector2(2.9802322e-08, 0.999999)
+scale = Vector2(0.62499994, 0.875)
 texture = ExtResource("2_wp81b")
